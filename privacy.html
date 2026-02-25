@@ -10,25 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';if(t==='light')document.documentElement.setAttribute('data-theme','light')})()</script>
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <a href="index.html" class="nav-brand">
-        <img src="images/icon.png" alt="Vassant">
-        <span>vassant</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
   <main>
     <div class="page-header fade-in">
       <h1>Privacy Policy</h1>
@@ -78,7 +62,7 @@
         <li>The right to opt out of marketing communications</li>
         <li>The right to data portability</li>
       </ul>
-      <p>To exercise any of these rights, please contact us at <a href="mailto:vassantfinance@gmail.com" style="color: var(--text-primary); border-bottom: 1px solid var(--border);">vassantfinance@gmail.com</a>.</p>
+      <p>To exercise any of these rights, please contact us at <a href="mailto:vassantfinance@gmail.com" style="color:var(--text-primary);border-bottom:1px solid var(--border-hover)">vassantfinance@gmail.com</a>.</p>
 
       <h2>Children's Privacy</h2>
       <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected personal information from a child without parental consent, we will take steps to remove that information from our servers.</p>
@@ -89,21 +73,13 @@
       <h2>Contact Us</h2>
       <p>If you have any questions about this Privacy Policy, please contact us:</p>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:vassantfinance@gmail.com" style="color: var(--text-primary); border-bottom: 1px solid var(--border);">vassantfinance@gmail.com</a></li>
+        <li><strong>Email:</strong> <a href="mailto:vassantfinance@gmail.com" style="color:var(--text-primary);border-bottom:1px solid var(--border-hover)">vassantfinance@gmail.com</a></li>
         <li><strong>Phone:</strong> +1 (760) 585-6070</li>
         <li><strong>Address:</strong> 3666 Jefferson St, Riverside, California 92504</li>
       </ul>
     </div>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      &copy; 2026 Vassant Finance, LLC
-      <span class="footer-sep">&middot;</span>
-      <a href="privacy.html">Privacy Policy</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="terms.html">Terms &amp; Conditions</a>
-    </div>
-  </footer>
+  <script src="js/layout.js"></script>
 </body>
 </html>

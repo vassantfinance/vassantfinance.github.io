@@ -10,25 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';if(t==='light')document.documentElement.setAttribute('data-theme','light')})()</script>
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <a href="index.html" class="nav-brand">
-        <img src="images/icon.png" alt="Vassant">
-        <span>vassant</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
   <main>
     <section class="hero">
       <img src="images/icon.png" alt="Vassant" class="logo">
@@ -67,14 +51,6 @@
     </section>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      &copy; 2026 Vassant Finance, LLC
-      <span class="footer-sep">&middot;</span>
-      <a href="privacy.html">Privacy Policy</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="terms.html">Terms &amp; Conditions</a>
-    </div>
-  </footer>
+  <script src="js/layout.js"></script>
 </body>
 </html>
