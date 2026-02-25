@@ -3,115 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vassant — Coming Soon</title>
-  <meta name="description" content="Smart financial movement through strategic positioning.">
-  <link rel="icon" type="image/png" href="icon.png">
+  <title>Vassant Finance — Strategic Financial Technology</title>
+  <meta name="description" content="An online wealth management platform designed to promote strategic financial management and intelligent investment decision-making.">
+  <link rel="icon" type="image/png" href="images/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0B1120;
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      overflow: hidden;
-    }
-
-    /* Subtle background gradient glow */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      width: 800px;
-      height: 800px;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(
-        circle,
-        rgba(255, 45, 155, 0.06) 0%,
-        rgba(0, 207, 255, 0.04) 40%,
-        transparent 70%
-      );
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    main {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      animation: float 4s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    .wordmark {
-      font-size: 2.25rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #ffffff;
-    }
-
-    .headline {
-      font-size: 1.125rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      background: linear-gradient(135deg, #FF2D9B, #00CFFF);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-top: 0.5rem;
-    }
-
-    .teaser {
-      font-size: 1rem;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.55);
-      max-width: 340px;
-      line-height: 1.6;
-    }
-
-    footer {
-      position: fixed;
-      bottom: 2rem;
-      z-index: 1;
-      font-size: 0.75rem;
-      color: rgba(255, 255, 255, 0.3);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="images/icon.png" alt="Vassant">
+        <span>vassant</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <main>
-    <img src="icon.png" alt="Vassant" class="logo">
-    <div class="wordmark">vassant</div>
-    <div class="headline">Coming Soon</div>
-    <p class="teaser">Smart financial movement through strategic positioning.</p>
+    <section class="hero">
+      <img src="images/icon.png" alt="Vassant" class="logo">
+      <div class="wordmark fade-in">vassant</div>
+      <div class="tagline gradient-text fade-in">Strategic Financial Technology</div>
+      <p class="subtitle fade-in">An online wealth management platform designed to promote strategic financial management and intelligent investment decision-making.</p>
+    </section>
+
+    <section class="section fade-in">
+      <h2>What We Do</h2>
+      <p>Vassant provides a comprehensive product suite that equips users with modern, user-led guidance and planning tools for wealth management. Our platform combines streamlined investment planning with a UI-friendly learning platform featuring data-driven, technical content — helping users distill capital market informational noise through rational research practices.</p>
+      <div class="features">
+        <div class="feature-card">
+          <h3>Investment Planning</h3>
+          <p>Streamlined tools for high-conviction decision-making, supplemented by "Spotlight" companies and ETFs that demonstrate our research platform in action.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Learning Platform</h3>
+          <p>Data-driven, technical content designed to build financial literacy alongside practical applications of research and planning methodologies.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Research Tools</h3>
+          <p>Rational research practices that cut through market noise, helping users make informed and intelligent investment decisions.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Holistic Solution</h3>
+          <p>A complete personal finance experience that improves the efficiency of the wealth growth journey from planning through execution.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in">
+      <h2>Our Approach</h2>
+      <p>Different from traditional wealth advisory services, Vassant puts the user in control. Our platform serves as a disruptor to legacy systems by replacing opaque advisory models with transparent, user-led tools built for the modern investor. Rather than telling you what to do, we give you the framework, data, and education to make strategic decisions with confidence.</p>
+      <p>Every feature is designed around one overarching goal: to improve the experience and efficiency of the wealth growth journey via a holistic personal finance solution.</p>
+    </section>
   </main>
-  <footer>&copy; 2026 Vassant Finance, LLC</footer>
+
+  <footer>
+    <div class="footer-inner">
+      &copy; 2026 Vassant Finance, LLC
+      <span class="footer-sep">&middot;</span>
+      <a href="privacy.html">Privacy Policy</a>
+      <span class="footer-sep">&middot;</span>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </div>
+  </footer>
 </body>
 </html>
