@@ -353,6 +353,76 @@ main::after {
   margin-top: 0.25rem;
 }
 
+/* --- Waitlist Form --- */
+.waitlist-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 480px;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.waitlist-form input[type="email"] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.25s;
+}
+
+.waitlist-form input[type="email"]::placeholder {
+  color: var(--text-tertiary);
+}
+
+.waitlist-form input[type="email"]:focus {
+  border-color: var(--accent-pink-border);
+}
+
+.waitlist-form button {
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-gradient);
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px var(--card-glow-pink);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.waitlist-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--card-glow-pink), 0 2px 12px var(--card-glow-cyan);
+}
+
+.waitlist-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.waitlist-msg {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.waitlist-success {
+  color: var(--accent-cyan);
+}
+
+.waitlist-error {
+  color: var(--accent-pink);
+}
+
 /* --- Hero CTA Buttons --- */
 .hero-actions {
   display: flex;
@@ -874,6 +944,10 @@ footer::before {
 
   .hero .subtitle {
     font-size: 0.95rem;
+  }
+
+  .waitlist-form {
+    flex-direction: column;
   }
 
   .hero-actions {
