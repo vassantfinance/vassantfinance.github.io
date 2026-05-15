@@ -4,7 +4,7 @@
    ======================================== */
 
 (function () {
-  var page = location.pathname.split('/').pop() || 'index.html';
+  var page = location.pathname.split('/').pop() || 'index';
 
   function link(href, label) {
     var cls = page === href ? ' class="active"' : '';
@@ -15,14 +15,14 @@
   var nav = document.createElement('nav');
   nav.innerHTML =
     '<div class="nav-inner">' +
-      '<a href="index.html" class="nav-brand">' +
+      '<a href="/" class="nav-brand">' +
         '<img src="images/icon.png" alt="Vassant">' +
         '<span>vassant</span>' +
       '</a>' +
       '<ul class="nav-links">' +
-        link('index.html', 'Home') +
-        link('about.html', 'About') +
-        link('contact.html', 'Contact') +
+        link('index', 'Home') +
+        link('about', 'About') +
+        link('contact', 'Contact') +
       '</ul>' +
       '<div class="nav-actions">' +
         '<button class="theme-toggle" aria-label="Toggle theme">' +
@@ -41,11 +41,12 @@
   var footer = document.createElement('footer');
   footer.innerHTML =
     '<div class="footer-inner">' +
-      '&copy; 2026 Vassant Finance, LLC' +
-      '<span class="footer-sep">&middot;</span>' +
-      '<a href="privacy.html">Privacy Policy</a>' +
-      '<span class="footer-sep">&middot;</span>' +
-      '<a href="terms.html">Terms &amp; Conditions</a>' +
+      '<div class="footer-copy">&copy; 2026 Vassant Finance, LLC</div>' +
+      '<div class="footer-links">' +
+        '<a href="privacy">Privacy Policy</a>' +
+        '<a href="terms">Terms &amp; Conditions</a>' +
+        '<a href="pro-terms">VassantPRO Terms</a>' +
+      '</div>' +
     '</div>';
 
   document.body.appendChild(footer);
