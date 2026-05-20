@@ -51,6 +51,17 @@
 
   document.body.appendChild(footer);
 
+  /* --- Legal anchor links --- */
+  var linkIcon = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+  document.querySelectorAll('.legal-content h2[id], .legal-content h3[id]').forEach(function (h) {
+    var a = document.createElement('a');
+    a.className = 'anchor-link';
+    a.href = '#' + h.id;
+    a.setAttribute('aria-label', 'Link to this section');
+    a.innerHTML = linkIcon;
+    h.appendChild(a);
+  });
+
   /* --- Theme toggle --- */
   nav.querySelector('.theme-toggle').addEventListener('click', function () {
     var d = document.documentElement;

@@ -622,6 +622,11 @@ h2::before {
 }
 
 /* Exclude gradient bar from legal page h2s */
+.legal-content h2,
+.legal-content h3 {
+  scroll-margin-top: calc(var(--nav-height) + 1.5rem);
+}
+
 .legal-content h2 {
   padding-left: 0;
 }
@@ -636,6 +641,30 @@ h2::before {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
+}
+
+.legal-content h2 .anchor-link,
+.legal-content h3 .anchor-link {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.4rem;
+  opacity: 0;
+  transition: opacity 0.15s;
+  color: var(--text-tertiary);
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.legal-content h2:hover .anchor-link,
+.legal-content h3:hover .anchor-link {
+  opacity: 1;
+}
+
+.legal-content h2 .anchor-link svg,
+.legal-content h3 .anchor-link svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
 }
 
 .legal-content table {
