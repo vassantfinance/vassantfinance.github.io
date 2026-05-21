@@ -11,10 +11,6 @@
     return '<li><a href="' + href + '"' + cls + '>' + label + '</a></li>';
   }
 
-  function ext(href, label) {
-    return '<li><a href="' + href + '">' + label + '</a></li>';
-  }
-
   /* --- Nav --- */
   var nav = document.createElement('nav');
   nav.innerHTML =
@@ -26,8 +22,6 @@
       '<ul class="nav-links">' +
         link('index', 'Home') +
         link('about', 'About') +
-        ext('https://docs.vassantfinance.com', 'Docs') +
-        ext('https://docs.vassantfinance.com/blog', 'Blog') +
         link('contact', 'Contact') +
       '</ul>' +
       '<div class="nav-actions">' +
@@ -49,8 +43,6 @@
     '<div class="footer-inner">' +
       '<div class="footer-copy">&copy; 2026 Vassant Finance, LLC</div>' +
       '<div class="footer-links">' +
-        '<a href="https://docs.vassantfinance.com">Docs</a>' +
-        '<a href="https://docs.vassantfinance.com/blog">Blog</a>' +
         '<a href="privacy">Privacy Policy</a>' +
         '<a href="terms">Terms &amp; Conditions</a>' +
         '<a href="pro-terms">VassantPRO Terms</a>' +
