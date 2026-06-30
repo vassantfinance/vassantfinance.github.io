@@ -20,8 +20,7 @@
   nav.innerHTML =
     '<div class="nav-inner">' +
       '<a href="/" class="nav-brand">' +
-        '<img src="images/icon.png" alt="Vassant">' +
-        '<span>vassant</span>' +
+        '<img src="images/logo-full.svg" alt="Vassant" class="nav-logo-full">' +
       '</a>' +
       '<ul class="nav-links">' +
         link('index', 'Home') +
@@ -35,6 +34,7 @@
           '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>' +
           '<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>' +
         '</button>' +
+        '<a href="index#waitlist-form" class="nav-cta btn-outline">Join the Beta</a>' +
         '<button class="nav-toggle" aria-label="Toggle menu">' +
           '<span></span><span></span><span></span>' +
         '</button>' +
@@ -47,12 +47,37 @@
   var footer = document.createElement('footer');
   footer.innerHTML =
     '<div class="footer-inner">' +
-      '<div class="footer-copy">&copy; 2026 Vassant Finance, LLC</div>' +
-      '<div class="footer-links">' +
-        '<a href="contact">Contact</a>' +
-        '<a href="pro-terms">VassantPRO</a>' +
-        '<a href="terms">Terms &amp; Conditions</a>' +
-        '<a href="privacy">Privacy Policy</a>' +
+      '<div class="footer-col footer-col--brand">' +
+        '<a href="/" class="footer-logo"><img src="images/logo-full.svg" alt="Vassant" class="nav-logo-full"></a>' +
+        '<p class="footer-nav-label">Navigation</p>' +
+        '<ul class="footer-nav-links">' +
+          '<li><a href="index">Home</a></li>' +
+          '<li><a href="about">About</a></li>' +
+          '<li><a href="https://docs.vassantfinance.com">Docs</a></li>' +
+          '<li><a href="https://docs.vassantfinance.com/blog">Blog</a></li>' +
+          '<li><a href="contact">Contact</a></li>' +
+        '</ul>' +
+        '<div class="footer-legal">' +
+          '<span>&copy; 2026 Vassant Finance, LLC</span>' +
+          '<a href="privacy">Privacy Policy</a>' +
+          '<a href="terms">Terms &amp; Conditions</a>' +
+        '</div>' +
+      '</div>' +
+      '<div class="footer-col footer-col--contact">' +
+        '<p class="footer-section-label">Contact us</p>' +
+        '<a href="mailto:contact@vassantfinance.com" class="footer-contact-link">contact@vassantfinance.com</a>' +
+        '<p class="footer-section-label" style="margin-top:2.5rem">Follow us</p>' +
+        '<div class="footer-socials">' +
+          '<a href="https://x.com/vassantfinance" class="footer-social-icon" aria-label="X / Twitter" target="_blank" rel="noopener">' +
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>' +
+          '</a>' +
+          '<a href="https://instagram.com/vassantfinance" class="footer-social-icon" aria-label="Instagram" target="_blank" rel="noopener">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>' +
+          '</a>' +
+          '<a href="https://linkedin.com/company/vassantfinance" class="footer-social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">' +
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>' +
+          '</a>' +
+        '</div>' +
       '</div>' +
     '</div>';
 
@@ -72,8 +97,8 @@
   /* --- Theme toggle --- */
   nav.querySelector('.theme-toggle').addEventListener('click', function () {
     var d = document.documentElement;
-    var t = d.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-    if (t === 'light') d.setAttribute('data-theme', 'light');
+    var t = d.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    if (t === 'dark') d.setAttribute('data-theme', 'dark');
     else d.removeAttribute('data-theme');
     localStorage.setItem('theme', t);
   });
