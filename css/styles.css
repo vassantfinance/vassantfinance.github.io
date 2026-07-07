@@ -1705,3 +1705,45 @@ footer::before { display: none; }
     flex-direction: row;
   }
 }
+
+/* --- Consent Banner --- */
+.consent-banner {
+  position: fixed;
+  z-index: 1000;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  margin: 0 auto;
+  max-width: 44rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  background: var(--nav-bg-mobile);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.consent-banner-text {
+  flex: 1 1 18rem;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.consent-banner-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.consent-banner-actions .btn-primary,
+.consent-banner-actions .btn-secondary {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+}
