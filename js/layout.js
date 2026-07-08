@@ -28,6 +28,7 @@
         ext('https://docs.vassantfinance.com', 'Docs') +
         ext('https://docs.vassantfinance.com/blog', 'Blog') +
         link('contact', 'Contact') +
+        '<li class="nav-links-cta"><a href="index#waitlist-form">Join the Beta</a></li>' +
       '</ul>' +
       '<div class="nav-actions">' +
         '<button class="theme-toggle" aria-label="Toggle theme">' +
@@ -103,9 +104,30 @@
     localStorage.setItem('theme', t);
   });
 
+  /* --- Side-nav overlay --- */
+  var overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  document.body.appendChild(overlay);
+
+  function closeSideNav() {
+    nav.querySelector('.nav-toggle').classList.remove('open');
+    nav.querySelector('.nav-links').classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
   /* --- Hamburger toggle --- */
   nav.querySelector('.nav-toggle').addEventListener('click', function () {
-    this.classList.toggle('open');
-    nav.querySelector('.nav-links').classList.toggle('open');
+    var isOpen = this.classList.toggle('open');
+    nav.querySelector('.nav-links').classList.toggle('open', isOpen);
+    overlay.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  overlay.addEventListener('click', closeSideNav);
+
+  /* Close side nav when a link is tapped */
+  nav.querySelectorAll('.nav-links a').forEach(function (a) {
+    a.addEventListener('click', closeSideNav);
   });
 })();

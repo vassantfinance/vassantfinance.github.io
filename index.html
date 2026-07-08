@@ -41,6 +41,10 @@
           <input type="email" name="email" placeholder="Enter your email" required>
           <button type="submit">Join the Beta</button>
         </form>
+        <div class="hero-store-badges">
+          <a href="#" aria-label="Download on the App Store"><img src="images/btn-app-store.png" alt="App Store"></a>
+          <a href="#" aria-label="Get it on Google Play"><img src="images/btn-google-play.png" alt="Google Play"></a>
+        </div>
       </div>
       <div class="hero-visual fade-in">
         <div class="hero-composition">
@@ -52,11 +56,45 @@
       </div>
     </section>
 
+    <section class="invest-section">
+      <div class="invest-visual" data-scroll="left">
+        <div class="invest-composition">
+          <img src="images/section-2-mod-1.png" class="inv-mod-1" alt="Investment tracking">
+          <img src="images/section-2-mod-2.png" class="inv-mod-2" alt="Thesis page">
+          <img src="images/section-2-mod-3.png" class="inv-mod-3" alt="Vault criteria">
+        </div>
+      </div>
+      <div class="invest-text" data-scroll="right">
+        <h2>Invest with structure and organization, not emotion</h2>
+        <p>Manage investments across multiple investing accounts, set target allocations for positions, track next purchase prices, and document your investment research &amp; theses so you don't forget why you bought. Our organizational structure makes streamlining your investment philosophy incredibly efficient, allowing you to focus more on your due diligence process.</p>
+      </div>
+    </section>
+
+    <section class="optimize-section">
+      <div class="optimize-text" data-scroll="left">
+        <h2><span class="text-accent-cyan">Optimize</span> where cash is deployed before investing</h2>
+        <p>Personalized tools for determining where each of your dollars should be deployed in a tax-efficient manner. Explore options for Roth IRAs, Brokerage Accounts, HSAs, Traditional IRAs, etc.</p>
+      </div>
+      <div class="optimize-visual" data-scroll="right">
+        <img src="images/sec-2-graph.svg" class="opt-graph" alt="Cash flow graph">
+        <div class="optimize-composition">
+          <img src="images/invest-mod.png" class="opt-invest-mod" alt="Total investable cash flow">
+          <img src="images/roth-ira-mod.png" class="opt-roth-ira" alt="Roth IRA allocation">
+        </div>
+      </div>
+    </section>
+
     <section class="knowledge-section fade-in">
       <div class="knowledge-visual" data-scroll="left">
         <div class="knowledge-composition">
           <img src="images/sec-2-donut.png" class="ks-donut" alt="Market insights">
-          <img src="images/sec-2-bus-model.png" class="ks-bus" alt="Business analysis">
+          <div class="ks-bus-slideshow">
+            <img src="images/sec-2-bus-model.png" class="ks-bus ks-bus-slide active" alt="Business analysis">
+            <img src="images/sec-2-bus-model-1.png" class="ks-bus ks-bus-slide" alt="Business analysis 2">
+            <img src="images/sec-2-bus-model-2.png" class="ks-bus ks-bus-slide" alt="Business analysis 3">
+            <img src="images/sec-2-bus-model-3.png" class="ks-bus ks-bus-slide" alt="Business analysis 4">
+            <img src="images/sec-2-bus-model-4.png" class="ks-bus ks-bus-slide" alt="Business analysis 5">
+          </div>
         </div>
       </div>
       <div class="knowledge-text" data-scroll="right">
@@ -205,7 +243,7 @@
     </div>
   </section>
 
-  <script src="js/layout.js?v=4"></script>
+  <script src="js/layout.js?v=5"></script>
   <script>
     (function () {
       var observer = new IntersectionObserver(function (entries) {
@@ -249,6 +287,17 @@
       };
       xhr.send('email=' + encodeURIComponent(email));
     });
+  </script>
+  <script>
+    (function () {
+      var slides = document.querySelectorAll('.ks-bus-slide');
+      var current = 0;
+      setInterval(function () {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 3000);
+    })();
   </script>
 </body>
 
