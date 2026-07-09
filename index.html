@@ -137,8 +137,8 @@
       </div>
     </section>
 
-    <section class="features-section fade-in">
-      <div class="feature-col" data-scroll="left">
+    <section class="features-section" data-features>
+      <div class="feature-col" style="--col-delay:0s">
         <div class="feature-col-icon">
           <svg width="21" height="22" viewBox="0 0 21 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.4387 18.1601C9.43612 18.5412 8.08487 18.7779 6.58832 18.7779C3.50245 18.7779 1.00112 17.7834 1 16.5556V3.22225C1.00224 1.99557 3.50357 1 6.58832 1C9.67307 1 12.1766 1.99445 12.1755 3.22225M1 3.22225C1 4.45004 3.50133 5.44449 6.58832 5.44449C9.6753 5.44449 12.1766 4.45004 12.1766 3.22225L12.1766 11.8445M1.00112 7.66672C1.00112 8.89451 3.50245 9.88896 6.58944 9.88896C9.67643 9.88896 12.1778 8.89451 12.1778 7.66672M10.5057 13.6946C9.4976 14.0891 8.11505 14.3335 6.58832 14.3335C3.50245 14.3335 1.00112 13.3391 1.00112 12.1113M18.5272 12.4646C20.4909 14.4169 20.4909 17.5836 18.5272 19.5358C16.5635 21.4881 13.3781 21.4881 11.4144 19.5358C9.45065 17.5836 9.45065 14.4169 11.4144 12.4646C13.3781 10.5124 16.5635 10.5124 18.5272 12.4646Z"/>
@@ -147,7 +147,7 @@
         <h3>Capital Allocation</h3>
         <p>Personalized tools for determining where each of your dollars should deployed in a tax-efficient manner. Explore options for Roth IRAs, Brokerage Accounts, HSAs, Traditional IRAs, etc.</p>
       </div>
-      <div class="feature-col" data-scroll="up">
+      <div class="feature-col" style="--col-delay:0.12s">
         <div class="feature-col-icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 1H1V8H8V1Z"/>
@@ -159,7 +159,7 @@
         <h3>Investment Modelling</h3>
         <p>A streamlined framework for planning unique investments across all your various accounts. Track investment research, allocation targets, next purchase prices, and more.</p>
       </div>
-      <div class="feature-col" data-scroll="up">
+      <div class="feature-col" style="--col-delay:0.24s">
         <div class="feature-col-icon">
           <svg width="22" height="20" viewBox="0 0 22 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
             <path d="M11 5C11 3.93913 10.5786 2.92172 9.82843 2.17157C9.07828 1.42143 8.06087 1 7 1H1V16H8C8.79565 16 9.55871 16.3161 10.1213 16.8787C10.6839 17.4413 11 18.2044 11 19M11 5V19M11 5C11 3.93913 11.4214 2.92172 12.1716 2.17157C12.9217 1.42143 13.9391 1 15 1H21V16H14C13.2044 16 12.4413 16.3161 11.8787 16.8787C11.3161 17.4413 11 18.2044 11 19"/>
@@ -168,7 +168,7 @@
         <h3>Knowledge Base</h3>
         <p>A library of objective, data-driven concepts that provide tangible insights into everything investing. This includes fundamentals, psychology, ETFs, company and management analysis, and valuation.</p>
       </div>
-      <div class="feature-col" data-scroll="right">
+      <div class="feature-col" style="--col-delay:0.36s">
         <div class="feature-col-icon">
           <svg width="16" height="20" viewBox="0 0 16 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.8887 1.43796C9.48852 4.6828 11.723 7.57177 14.4564 9.93775C11.6166 12.2603 9.33654 15.1919 7.78581 18.5169L7.78236 18.508C6.17345 15.2442 3.9248 12.3398 1.17395 9.96191C3.9248 7.58399 6.17345 4.67961 7.78236 1.41587L7.82931 1.31919L7.8887 1.43796Z"/>
@@ -330,6 +330,21 @@
           });
         }, { threshold: 0.2 });
         graphObserver.observe(graph);
+      }
+    })();
+
+    (function () {
+      var featuresSection = document.querySelector('[data-features]');
+      if (featuresSection) {
+        var featuresObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              featuresSection.classList.add('cols-in');
+              featuresObserver.unobserve(featuresSection);
+            }
+          });
+        }, { threshold: 0.15 });
+        featuresObserver.observe(featuresSection);
       }
     })();
 
