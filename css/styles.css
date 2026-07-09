@@ -762,7 +762,7 @@ main::after {
 .opt-graph {
   position: absolute;
   width: 100%;
-  bottom: -120px;
+  bottom: -20px;
   left: 0;
   z-index: 0;
   opacity: 0.5;
@@ -807,12 +807,25 @@ main::after {
 
 /* --- Knowledge Section --- */
 .knowledge-section {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 4rem;
   padding: 6.5rem 0;
   margin-top: 12em;
+}
+
+.knowledge-dash-pattern {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+  mix-blend-mode: screen;
 }
 
 .knowledge-composition {
@@ -992,8 +1005,8 @@ main::after {
 
 .sp-phone {
   position: absolute;
-  width: 437px;
-  top: 0;
+  width: 500px;
+  top: -40px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -1001,16 +1014,16 @@ main::after {
 
 .sp-donut {
   position: absolute;
-  width: 250px;
+  width: 320px;
   top: 120px;
-  right: 90px;
+  right: 20px;
   z-index: 2;
 }
 
 .sp-list {
   position: absolute;
-  width: 390px;
-  bottom: 10px;
+  width: 420px;
+  bottom: -20px;
   right: 170px;
   z-index: 3;
 }
@@ -1275,6 +1288,34 @@ main::after {
 
 .section p + p {
   margin-top: 0;
+}
+
+/* --- About Page --- */
+.about-story {
+  padding: 4rem 0 6rem;
+}
+
+.about-body {
+  max-width: 720px;
+}
+
+.about-body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.about-body h2:first-child {
+  margin-top: 0;
+}
+
+.about-body p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
 }
 
 /* --- Feature Cards (Homepage) --- */
