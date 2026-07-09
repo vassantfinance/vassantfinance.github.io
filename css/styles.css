@@ -152,6 +152,19 @@ nav {
   margin-left: auto;
 }
 
+.nav-download-app {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-pink);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.nav-download-app:hover {
+  opacity: 0.75;
+}
+
 .nav-cta {
   display: inline-flex;
   align-items: center;
