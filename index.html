@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>(function(){var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';if(t==='dark')document.documentElement.setAttribute('data-theme','dark')})()</script>
@@ -33,14 +33,17 @@
 <body>
   <main class="home">
     <section class="hero">
-      <img src="images/hero-squares.png" class="hero-squares" alt="">
-      <div class="hero-text fade-in">
+<div class="hero-text fade-in">
         <h1>Smarter investing and wealth management.</h1>
         <p class="subtitle">An online wealth management platform designed to promote strategic financial management and intelligent investment decision-making.</p>
         <form class="waitlist-form" id="waitlist-form">
           <input type="email" name="email" placeholder="Enter your email" required>
-          <button type="submit">Join the Beta</button>
+          <button type="submit">Sign Up</button>
         </form>
+        <div class="hero-store-badges">
+          <a href="#" aria-label="Download on the App Store"><img src="images/btn-app-store.svg" alt="App Store"></a>
+          <a href="#" aria-label="Get it on Google Play"><img src="images/btn-google-play.svg" alt="Google Play"></a>
+        </div>
       </div>
       <div class="hero-visual fade-in">
         <div class="hero-composition">
@@ -52,15 +55,79 @@
       </div>
     </section>
 
+    <section class="invest-section">
+      <div class="invest-visual" data-scroll="left">
+        <div class="invest-composition">
+          <img src="images/section-2-mod-1.png" class="inv-mod-1" alt="Investment tracking">
+          <img src="images/section-2-mod-2.png" class="inv-mod-2" alt="Thesis page">
+          <img src="images/section-2-mod-3.png" class="inv-mod-3" alt="Vault criteria">
+        </div>
+      </div>
+      <div class="invest-text" data-scroll="right">
+        <h2>Invest with structure and organization, not emotion</h2>
+        <p>Manage investments across multiple investing accounts, set target allocations for positions, track next purchase prices, and document your investment research &amp; theses so you don't forget why you bought. Our organizational structure makes streamlining your investment philosophy incredibly efficient, allowing you to focus more on your due diligence process.</p>
+      </div>
+    </section>
+
+    <section class="optimize-section">
+      <svg class="opt-graph" width="1389" height="997" viewBox="0 0 1389 997" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path class="graph-bar" style="--bar-delay:0s"    opacity="0.88" d="M0 691.092C0 684.088 5.67764 678.41 12.6814 678.41H48.3186C55.3224 678.41 61 684.088 61 691.092V983.729C61 990.733 55.3224 996.41 48.3186 996.41H12.6814C5.67764 996.41 0 990.733 0 983.729V691.092Z" fill="url(#paint9_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.08s" opacity="0.88" d="M110 638.092C110 631.088 115.678 625.41 122.681 625.41H158.319C165.322 625.41 171 631.088 171 638.092V983.729C171 990.733 165.322 996.41 158.319 996.41H122.681C115.678 996.41 110 990.733 110 983.729V638.092Z" fill="url(#paint10_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.16s" opacity="0.88" d="M221 579.092C221 572.088 226.678 566.41 233.681 566.41H270.319C277.322 566.41 283 572.088 283 579.092V983.729C283 990.732 277.322 996.41 270.319 996.41H233.681C226.678 996.41 221 990.733 221 983.729V579.092Z" fill="url(#paint12_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.24s" opacity="0.88" d="M331 531.092C331 524.088 336.678 518.41 343.681 518.41H379.319C386.322 518.41 392 524.088 392 531.092V982.729C392 989.733 386.322 995.41 379.319 995.41H343.681C336.678 995.41 331 989.733 331 982.729V531.092Z" fill="url(#paint5_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.32s" opacity="0.88" d="M443 479.091C443 472.088 448.678 466.41 455.681 466.41H491.319C498.322 466.41 504 472.088 504 479.091V983.729C504 990.732 498.322 996.41 491.319 996.41H455.681C448.678 996.41 443 990.732 443 983.729V479.091Z" fill="url(#paint8_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.40s" opacity="0.88" d="M553 426.091C553 419.088 558.678 413.41 565.681 413.41H601.319C608.322 413.41 614 419.088 614 426.091V983.729C614 990.732 608.322 996.41 601.319 996.41H565.681C558.678 996.41 553 990.732 553 983.729V426.091Z" fill="url(#paint11_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.48s" opacity="0.88" d="M666 361.091C666 354.088 671.678 348.41 678.681 348.41H714.319C721.322 348.41 727 354.088 727 361.091V983.729C727 990.732 721.322 996.41 714.319 996.41H678.681C671.678 996.41 666 990.732 666 983.729V361.091Z" fill="url(#paint4_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.56s" opacity="0.88" d="M774 308.091C774 301.088 779.678 295.41 786.681 295.41H823.319C830.322 295.41 836 301.088 836 308.091V983.729C836 990.732 830.322 996.41 823.319 996.41H786.681C779.678 996.41 774 990.732 774 983.729V308.091Z" fill="url(#paint3_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.64s" opacity="0.88" d="M885 249.091C885 242.088 890.678 236.41 897.681 236.41H933.319C940.322 236.41 946 242.088 946 249.091V983.729C946 990.732 940.322 996.41 933.319 996.41H897.681C890.678 996.41 885 990.732 885 983.729V249.091Z" fill="url(#paint0_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.72s" opacity="0.88" d="M996 202.091C996 195.088 1001.68 189.41 1008.68 189.41H1044.32C1051.32 189.41 1057 195.088 1057 202.091V983.729C1057 990.732 1051.32 996.41 1044.32 996.41H1008.68C1001.68 996.41 996 990.732 996 983.729V202.091Z" fill="url(#paint1_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.80s" opacity="0.88" d="M1106 149.091C1106 142.088 1111.68 136.41 1118.68 136.41H1155.32C1162.32 136.41 1168 142.088 1168 149.091V983.729C1168 990.732 1162.32 996.41 1155.32 996.41H1118.68C1111.68 996.41 1106 990.732 1106 983.729V149.091Z" fill="url(#paint2_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.88s" opacity="0.88" d="M1218 66.0914C1218 59.0877 1223.68 53.41 1230.68 53.41H1266.32C1273.32 53.41 1279 59.0877 1279 66.0914V983.729C1279 990.732 1273.32 996.41 1266.32 996.41H1230.68C1223.68 996.41 1218 990.732 1218 983.729V66.0914Z" fill="url(#paint6_linear_313_2428)" fill-opacity="0.42"/>
+        <path class="graph-bar" style="--bar-delay:0.96s" opacity="0.88" d="M1328 13.0914C1328 6.08765 1333.68 0.410034 1340.68 0.410034H1376.32C1383.32 0.410034 1389 6.08767 1389 13.0914V983.729C1389 990.732 1383.32 996.41 1376.32 996.41H1340.68C1333.68 996.41 1328 990.732 1328 983.729V13.0914Z" fill="url(#paint7_linear_313_2428)" fill-opacity="0.42"/>
+        <defs>
+          <linearGradient id="paint0_linear_313_2428" x1="915.5" y1="236.41" x2="915.5" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint1_linear_313_2428" x1="1026.5" y1="189.41" x2="1026.5" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint2_linear_313_2428" x1="1137" y1="136.41" x2="1137" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint3_linear_313_2428" x1="805" y1="295.41" x2="805" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint4_linear_313_2428" x1="696.5" y1="348.41" x2="696.5" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint5_linear_313_2428" x1="361.5" y1="518.41" x2="361.5" y2="995.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint6_linear_313_2428" x1="1248.5" y1="53.41" x2="1248.5" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint7_linear_313_2428" x1="1358.5" y1="0.410034" x2="1358.5" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint8_linear_313_2428" x1="473.5" y1="466.41" x2="473.5" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint9_linear_313_2428" x1="30.5" y1="678.41" x2="30.5" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint10_linear_313_2428" x1="140.5" y1="625.41" x2="140.5" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint11_linear_313_2428" x1="583.5" y1="413.41" x2="583.5" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+          <linearGradient id="paint12_linear_313_2428" x1="252" y1="566.41" x2="252" y2="996.41" gradientUnits="userSpaceOnUse"><stop stop-color="#CBCBCB" stop-opacity="0.58"/><stop offset="0.836538" stop-color="#999999" stop-opacity="0.37"/></linearGradient>
+        </defs>
+      </svg>
+      <div class="optimize-text" data-scroll="left">
+        <h2><span class="text-accent-cyan">Optimize</span> where cash is deployed before investing</h2>
+        <p>Personalized tools for determining where each of your dollars should be deployed in a tax-efficient manner. Explore options for Roth IRAs, Brokerage Accounts, HSAs, Traditional IRAs, etc.</p>
+      </div>
+      <div class="optimize-visual" data-scroll="right">
+        <div class="optimize-composition">
+          <img src="images/invest-mod.png" class="opt-invest-mod" alt="Total investable cash flow">
+          <img src="images/roth-ira-mod.png" class="opt-roth-ira" alt="Roth IRA allocation">
+        </div>
+      </div>
+    </section>
+
     <section class="knowledge-section fade-in">
+      <img src="images/dash-pattern-2.png" class="knowledge-dash-pattern" alt="" aria-hidden="true">
       <div class="knowledge-visual" data-scroll="left">
         <div class="knowledge-composition">
           <img src="images/sec-2-donut.png" class="ks-donut" alt="Market insights">
-          <img src="images/sec-2-bus-model.png" class="ks-bus" alt="Business analysis">
+          <div class="ks-bus-slideshow">
+            <img src="images/sec-2-bus-model.png" class="ks-bus ks-bus-slide active" alt="Business analysis">
+            <img src="images/sec-2-bus-model-1.png" class="ks-bus ks-bus-slide" alt="Business analysis 2">
+            <img src="images/sec-2-bus-model-2.png" class="ks-bus ks-bus-slide" alt="Business analysis 3">
+            <img src="images/sec-2-bus-model-3.png" class="ks-bus ks-bus-slide" alt="Business analysis 4">
+            <img src="images/sec-2-bus-model-4.png" class="ks-bus ks-bus-slide" alt="Business analysis 5">
+          </div>
         </div>
       </div>
       <div class="knowledge-text" data-scroll="right">
-        <h2><span class="text-accent-cyan">Discover</span> niche principles that drive long-term investment returns</h2>
+        <h2><span class="text-accent-cyan">Master</span> niche principles that drive long-term investment returns</h2>
         <p>Through our Knowledge Base, Vassant offers the most comprehensive and fundamental libraries of content for long-term investors. Explore objective, data-driven concepts that allow you to cut through the market noise and research your investments with confidence.</p>
         <div class="knowledge-awards">
           <img src="images/award-star.svg" class="award-icon" alt="Quality">
@@ -70,8 +137,8 @@
       </div>
     </section>
 
-    <section class="features-section fade-in">
-      <div class="feature-col" data-scroll="left">
+    <section class="features-section" data-features>
+      <div class="feature-col" style="--col-delay:0s">
         <div class="feature-col-icon">
           <svg width="21" height="22" viewBox="0 0 21 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.4387 18.1601C9.43612 18.5412 8.08487 18.7779 6.58832 18.7779C3.50245 18.7779 1.00112 17.7834 1 16.5556V3.22225C1.00224 1.99557 3.50357 1 6.58832 1C9.67307 1 12.1766 1.99445 12.1755 3.22225M1 3.22225C1 4.45004 3.50133 5.44449 6.58832 5.44449C9.6753 5.44449 12.1766 4.45004 12.1766 3.22225L12.1766 11.8445M1.00112 7.66672C1.00112 8.89451 3.50245 9.88896 6.58944 9.88896C9.67643 9.88896 12.1778 8.89451 12.1778 7.66672M10.5057 13.6946C9.4976 14.0891 8.11505 14.3335 6.58832 14.3335C3.50245 14.3335 1.00112 13.3391 1.00112 12.1113M18.5272 12.4646C20.4909 14.4169 20.4909 17.5836 18.5272 19.5358C16.5635 21.4881 13.3781 21.4881 11.4144 19.5358C9.45065 17.5836 9.45065 14.4169 11.4144 12.4646C13.3781 10.5124 16.5635 10.5124 18.5272 12.4646Z"/>
@@ -80,7 +147,7 @@
         <h3>Capital Allocation</h3>
         <p>Personalized tools for determining where each of your dollars should deployed in a tax-efficient manner. Explore options for Roth IRAs, Brokerage Accounts, HSAs, Traditional IRAs, etc.</p>
       </div>
-      <div class="feature-col" data-scroll="up">
+      <div class="feature-col" style="--col-delay:0.12s">
         <div class="feature-col-icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 1H1V8H8V1Z"/>
@@ -92,7 +159,7 @@
         <h3>Investment Modelling</h3>
         <p>A streamlined framework for planning unique investments across all your various accounts. Track investment research, allocation targets, next purchase prices, and more.</p>
       </div>
-      <div class="feature-col" data-scroll="up">
+      <div class="feature-col" style="--col-delay:0.24s">
         <div class="feature-col-icon">
           <svg width="22" height="20" viewBox="0 0 22 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
             <path d="M11 5C11 3.93913 10.5786 2.92172 9.82843 2.17157C9.07828 1.42143 8.06087 1 7 1H1V16H8C8.79565 16 9.55871 16.3161 10.1213 16.8787C10.6839 17.4413 11 18.2044 11 19M11 5V19M11 5C11 3.93913 11.4214 2.92172 12.1716 2.17157C12.9217 1.42143 13.9391 1 15 1H21V16H14C13.2044 16 12.4413 16.3161 11.8787 16.8787C11.3161 17.4413 11 18.2044 11 19"/>
@@ -101,7 +168,7 @@
         <h3>Knowledge Base</h3>
         <p>A library of objective, data-driven concepts that provide tangible insights into everything investing. This includes fundamentals, psychology, ETFs, company and management analysis, and valuation.</p>
       </div>
-      <div class="feature-col" data-scroll="right">
+      <div class="feature-col" style="--col-delay:0.36s">
         <div class="feature-col-icon">
           <svg width="16" height="20" viewBox="0 0 16 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.8887 1.43796C9.48852 4.6828 11.723 7.57177 14.4564 9.93775C11.6166 12.2603 9.33654 15.1919 7.78581 18.5169L7.78236 18.508C6.17345 15.2442 3.9248 12.3398 1.17395 9.96191C3.9248 7.58399 6.17345 4.67961 7.78236 1.41587L7.82931 1.31919L7.8887 1.43796Z"/>
@@ -128,7 +195,7 @@
 
     <section class="testimonials-section fade-in">
       <div class="testimonials-heading" data-scroll="left">
-        <h2>Discover why hundreds of <span class="text-accent-pink">long term investors</span> prefer to manage their investments and capital allocation with <span class="text-accent-pink">Vassant</span>.</h2>
+        <h2>Learn why hundreds of <span class="text-accent-pink">long term investors</span> prefer to manage their investments and capital allocation with <span class="text-accent-pink">Vassant</span>.</h2>
       </div>
       <div class="testimonials-track-wrap" data-scroll="right">
         <div class="testimonials-track">
@@ -205,7 +272,7 @@
     </div>
   </section>
 
-  <script src="js/layout.js?v=5"></script>
+  <script src="js/layout.js?v=8"></script>
   <script>
     (function () {
       var observer = new IntersectionObserver(function (entries) {
@@ -249,6 +316,47 @@
       };
       xhr.send('email=' + encodeURIComponent(email));
     });
+  </script>
+  <script>
+    (function () {
+      var graph = document.querySelector('.opt-graph');
+      if (graph) {
+        var graphObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              graph.classList.add('bars-in');
+              graphObserver.unobserve(graph);
+            }
+          });
+        }, { threshold: 0.2 });
+        graphObserver.observe(graph);
+      }
+    })();
+
+    (function () {
+      var featuresSection = document.querySelector('[data-features]');
+      if (featuresSection) {
+        var featuresObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              featuresSection.classList.add('cols-in');
+              featuresObserver.unobserve(featuresSection);
+            }
+          });
+        }, { threshold: 0.15 });
+        featuresObserver.observe(featuresSection);
+      }
+    })();
+
+    (function () {
+      var slides = document.querySelectorAll('.ks-bus-slide');
+      var current = 0;
+      setInterval(function () {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 3000);
+    })();
   </script>
 </body>
 

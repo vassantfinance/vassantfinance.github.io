@@ -79,17 +79,14 @@
       '</a>' +
       '<ul class="nav-links">' +
         link('index', 'Home') +
-        link('about', 'About') +
+        link('about.html', 'About') +
         ext('https://docs.vassantfinance.com', 'Docs') +
         ext('https://docs.vassantfinance.com/blog', 'Blog') +
         link('contact', 'Contact') +
       '</ul>' +
       '<div class="nav-actions">' +
-        '<button class="theme-toggle" aria-label="Toggle theme">' +
-          '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>' +
-          '<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>' +
-        '</button>' +
-        '<a href="index#waitlist-form" class="nav-cta btn-outline">Join the Beta</a>' +
+        '<a href="index#waitlist-form" class="nav-download-app">Download the App</a>' +
+        '<a href="index#waitlist-form" class="nav-cta btn-outline">Sign up</a>' +
         '<button class="nav-toggle" aria-label="Toggle menu">' +
           '<span></span><span></span><span></span>' +
         '</button>' +
@@ -107,7 +104,7 @@
         '<p class="footer-nav-label">Navigation</p>' +
         '<ul class="footer-nav-links">' +
           '<li><a href="index">Home</a></li>' +
-          '<li><a href="about">About</a></li>' +
+          '<li><a href="about.html">About</a></li>' +
           '<li><a href="https://docs.vassantfinance.com">Docs</a></li>' +
           '<li><a href="https://docs.vassantfinance.com/blog">Blog</a></li>' +
           '<li><a href="contact">Contact</a></li>' +
@@ -175,18 +172,31 @@
     h.appendChild(a);
   });
 
-  /* --- Theme toggle --- */
-  nav.querySelector('.theme-toggle').addEventListener('click', function () {
-    var d = document.documentElement;
-    var t = d.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    if (t === 'dark') d.setAttribute('data-theme', 'dark');
-    else d.removeAttribute('data-theme');
-    localStorage.setItem('theme', t);
-  });
+
+  /* --- Side-nav overlay --- */
+  var overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  document.body.appendChild(overlay);
+
+  function closeSideNav() {
+    nav.querySelector('.nav-toggle').classList.remove('open');
+    nav.querySelector('.nav-links').classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
 
   /* --- Hamburger toggle --- */
   nav.querySelector('.nav-toggle').addEventListener('click', function () {
-    this.classList.toggle('open');
-    nav.querySelector('.nav-links').classList.toggle('open');
+    var isOpen = this.classList.toggle('open');
+    nav.querySelector('.nav-links').classList.toggle('open', isOpen);
+    overlay.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  overlay.addEventListener('click', closeSideNav);
+
+  /* Close side nav when a link is tapped */
+  nav.querySelectorAll('.nav-links a').forEach(function (a) {
+    a.addEventListener('click', closeSideNav);
   });
 })();
