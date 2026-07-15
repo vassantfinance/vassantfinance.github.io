@@ -78,15 +78,15 @@
         '<img src="images/logo-full.svg" alt="Vassant" class="nav-logo-full">' +
       '</a>' +
       '<ul class="nav-links">' +
-        link('index', 'Home') +
+        link('index.html', 'Home') +
         link('about.html', 'About') +
         ext('https://docs.vassantfinance.com', 'Docs') +
         ext('https://docs.vassantfinance.com/blog', 'Blog') +
-        link('contact', 'Contact') +
+        link('contact.html', 'Contact') +
       '</ul>' +
       '<div class="nav-actions">' +
-        '<a href="index#waitlist-form" class="nav-download-app">Download the App</a>' +
-        '<a href="index#waitlist-form" class="nav-cta btn-outline">Sign up</a>' +
+        '<a href="index.html#waitlist-form" class="nav-download-app">Download the App</a>' +
+        '<a href="index.html#waitlist-form" class="nav-cta btn-outline">Sign up</a>' +
         '<button class="nav-toggle" aria-label="Toggle menu">' +
           '<span></span><span></span><span></span>' +
         '</button>' +
@@ -103,11 +103,11 @@
         '<a href="/" class="footer-logo"><img src="images/logo-full.svg" alt="Vassant" class="nav-logo-full"></a>' +
         '<p class="footer-nav-label">Navigation</p>' +
         '<ul class="footer-nav-links">' +
-          '<li><a href="index">Home</a></li>' +
+          '<li><a href="index.html">Home</a></li>' +
           '<li><a href="about.html">About</a></li>' +
           '<li><a href="https://docs.vassantfinance.com">Docs</a></li>' +
           '<li><a href="https://docs.vassantfinance.com/blog">Blog</a></li>' +
-          '<li><a href="contact">Contact</a></li>' +
+          '<li><a href="contact.html">Contact</a></li>' +
         '</ul>' +
         '<div class="footer-legal">' +
           '<span>&copy; 2026 Vassant Finance, LLC</span>' +
