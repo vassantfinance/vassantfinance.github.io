@@ -257,6 +257,26 @@ main.home {
   max-width: 1349px;
 }
 
+/* --- Hero pop shapes --- */
+.hero-shape {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.hero-shape.is-animated {
+  animation: heroPop var(--dur, 4s) ease-in-out var(--delay, 0s) infinite;
+}
+
+@keyframes heroPop {
+  0%   { opacity: 0;           transform: scale(0.5) rotate(var(--rot, 0deg)); }
+  12%  { opacity: var(--op, 0.15); transform: scale(1)   rotate(var(--rot, 0deg)); }
+  75%  { opacity: var(--op, 0.15); transform: scale(1)   rotate(var(--rot, 0deg)); }
+  100% { opacity: 0;           transform: scale(0.5) rotate(var(--rot, 0deg)); }
+}
+
 /* --- Decorative Floating Outline Shapes --- */
 .hero::before,
 .hero::after {

@@ -362,6 +362,57 @@
         slides[current].classList.add('active');
       }, 3000);
     })();
+
+    (function () {
+      var hero = document.querySelector('.hero');
+      if (!hero) return;
+
+      var PINK = '#E5247F';
+      var CYAN = '#0092BD';
+
+      var defs = [
+        { top: '6%',  left: '1%',   w: 130, h: 130, r: 26, fill: false, color: PINK, op: 0.13, rot: -14, delay: 0,   dur: 5.5 },
+        { top: '68%', left: '3%',   w: 55,  h: 55,  r: 12, fill: true,  color: PINK, op: 0.10, rot: 8,   delay: 2.2, dur: 4.5 },
+        { top: '82%', left: '14%',  w: 28,  h: 28,  r: 7,  fill: true,  color: CYAN, op: 0.16, rot: -6,  delay: 4.0, dur: 4.0 },
+        { top: '4%',  left: '43%',  w: 48,  h: 48,  r: 11, fill: false, color: CYAN, op: 0.11, rot: 13,  delay: 1.5, dur: 5.0 },
+        { top: '3%',  left: '62%',  w: 85,  h: 85,  r: 18, fill: false, color: PINK, op: 0.09, rot: 20,  delay: 0.7, dur: 6.0 },
+        { top: '78%', left: '58%',  w: 36,  h: 36,  r: 9,  fill: true,  color: CYAN, op: 0.13, rot: -11, delay: 3.3, dur: 4.5 },
+        { top: '18%', left: '87%',  w: 65,  h: 65,  r: 15, fill: false, color: CYAN, op: 0.11, rot: 6,   delay: 1.0, dur: 5.2 },
+        { top: '88%', left: '82%',  w: 24,  h: 24,  r: 6,  fill: true,  color: PINK, op: 0.16, rot: 17,  delay: 2.8, dur: 4.0 },
+        { top: '52%', left: '94%',  w: 50,  h: 50,  r: 12, fill: false, color: PINK, op: 0.09, rot: -9,  delay: 3.8, dur: 5.5 },
+        { top: '45%', left: '0%',   w: 22,  h: 22,  r: 5,  fill: true,  color: CYAN, op: 0.14, rot: 4,   delay: 1.8, dur: 4.2 },
+      ];
+
+      defs.forEach(function (d) {
+        var el = document.createElement('div');
+        el.className = 'hero-shape';
+        el.style.top    = d.top;
+        el.style.left   = d.left;
+        el.style.width  = d.w + 'px';
+        el.style.height = d.h + 'px';
+        el.style.borderRadius = d.r + 'px';
+        el.style.setProperty('--rot',   d.rot + 'deg');
+        el.style.setProperty('--op',    d.op);
+        el.style.setProperty('--delay', d.delay + 's');
+        el.style.setProperty('--dur',   d.dur + 's');
+        if (d.fill) {
+          el.style.background = d.color;
+        } else {
+          el.style.border = '2px solid ' + d.color;
+        }
+        hero.appendChild(el);
+      });
+
+      var shapeObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          hero.querySelectorAll('.hero-shape').forEach(function (el) {
+            el.classList.toggle('is-animated', entry.isIntersecting);
+          });
+        });
+      }, { threshold: 0.1 });
+
+      shapeObserver.observe(hero);
+    })();
   </script>
 </body>
 
