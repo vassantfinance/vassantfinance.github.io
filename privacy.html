@@ -27,7 +27,7 @@
   <main>
     <div class="page-header fade-in">
       <h1><span class="gradient-text">Privacy</span> Policy</h1>
-      <p class="page-desc">Last updated: July 6, 2026</p>
+      <p class="page-desc">Last updated: July 15, 2026</p>
     </div>
 
     <div class="legal-content fade-in">
@@ -41,6 +41,10 @@
         <li><strong>Anonymized Data:</strong> We may collect financial information associated with your linked accounts, including but not limited to account balances, transaction history, cash deposits and withdrawals, investment holdings, portfolio allocations, outstanding debts, and payment histories as a result of your use of the application. If collected, this information is processed in an anonymized and de-identified manner and is used for product improvement, research, and analytics. This data does not contain personally identifiable information and cannot reasonably be used to identify you.</li>
       </ul>
       <p><strong>Website Analytics &amp; Cookies:</strong> Our website uses <strong>Google Analytics</strong> to understand how visitors use our pages. Analytics cookies and any related identifiers are <strong>only set after you accept</strong> via our consent banner; until then, analytics runs in a cookieless, consent-denied state (Google Consent Mode). Your choice is remembered across <code>vassantfinance.com</code> and its subdomains, and you can change it at any time by clearing the <code>va_consent</code> cookie in your browser.</p>
+
+      <p><strong>In-App Product Analytics:</strong> Our mobile app uses <strong>PostHog</strong> to understand which features are used and where the experience can be improved. Events record in-app navigation and feature usage — for example, which tab you opened, which learning lesson you viewed, or which ticker symbol you looked at — together with device and app metadata (device model, operating system, app version, locale, time zone) and your IP address. Once you sign in, these events are associated with a numeric account identifier rather than your name or email address, and activity recorded before you signed in is linked to that identifier.</p>
+
+      <p>We do not send your financial values to PostHog. Account balances, holdings, transaction amounts, and portfolio totals are not included in analytics events. The app does not record your screen, capture your taps, or take session recordings. You can turn off product analytics at any time in the app's settings, which stops events from being sent.</p>
 
       <h2 id="2">2. Plaid Data Processing &amp; Connectivity</h2>
       <p>Vassant uses <strong>Plaid Inc. ("Plaid")</strong> to enable secure bank account connectivity and retrieve your financial data. When you connect your accounts, Plaid acts as a data processor on our behalf.</p>
@@ -113,8 +117,8 @@
             <td>No user PII</td>
           </tr>
           <tr>
-            <td>Bugsnag</td>
-            <td>Error reporting</td>
+            <td>Sentry</td>
+            <td>Error and crash reporting</td>
             <td>May incidentally contain user identifiers in error context</td>
           </tr>
           <tr>
@@ -131,6 +135,11 @@
             <td>Google Analytics</td>
             <td>Website usage analytics (consent-based)</td>
             <td>Anonymized usage/device data; cookies only after consent</td>
+          </tr>
+          <tr>
+            <td>PostHog</td>
+            <td>In-app product analytics</td>
+            <td>Account identifier, device/app metadata, IP address, in-app feature usage; no financial values</td>
           </tr>
           <tr>
             <td>Expo / EAS</td>
