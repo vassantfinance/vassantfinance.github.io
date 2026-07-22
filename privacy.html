@@ -27,7 +27,7 @@
   <main>
     <div class="page-header fade-in">
       <h1><span class="gradient-text">Privacy</span> Policy</h1>
-      <p class="page-desc">Last updated: July 15, 2026</p>
+      <p class="page-desc">Last updated: July 22, 2026</p>
     </div>
 
     <div class="legal-content fade-in">
@@ -38,8 +38,12 @@
       <ul>
         <li><strong>Personal Data:</strong> When you register, we may collect personally identifiable information such as your name and email address.</li>
         <li><strong>Usage and Device Data:</strong> We automatically collect data including IP addresses, browser types, operating systems, access times, and unique device identifiers to improve and personalize our services.</li>
-        <li><strong>Anonymized Data:</strong> We may collect financial information associated with your linked accounts, including but not limited to account balances, transaction history, cash deposits and withdrawals, investment holdings, portfolio allocations, outstanding debts, and payment histories as a result of your use of the application. If collected, this information is processed in an anonymized and de-identified manner and is used for product improvement, research, and analytics. This data does not contain personally identifiable information and cannot reasonably be used to identify you.</li>
+        <li><strong>Financial and Plan Data:</strong> We collect the financial information you enter and the information retrieved from accounts you link, including budgets, income and expenses, contribution allocations, investment holdings, targets, purchase history, account balances, and transaction history. This data is stored against your account and is used to provide the service back to you. It is identified data, not anonymous — that is what allows the app to show you your own plan. Where we use this information for product research or aggregate statistics, we do so only after aggregating or de-identifying it.</li>
+        <li><strong>Content You Create:</strong> Notes, vault pages, conviction scores, and other written content you enter in the app are stored against your account so we can show them back to you. We do not use the content of your notes for advertising, and we do not send it to our analytics provider.</li>
+        <li><strong>Push Notification Tokens:</strong> If you enable notifications, we store the push token issued to your device so we can deliver alerts you have asked for.</li>
       </ul>
+
+      <p><strong>Signing In With Apple, Google, or Facebook:</strong> The app offers sign-in through Apple, Google, and Facebook. These providers supply their own software to the app to complete sign-in. If you choose one, that provider receives the fact that you are signing in to Vassant and returns a unique identifier for you, together with the email address and name on file with them, which we store to create or match your account. We do not receive your password with these providers, and we do not use their software for advertising, app-event reporting, or advertising identifiers — those features are disabled in our builds. If you would rather not involve a third party, you can register with an email address and password instead.</p>
       <p><strong>Website Analytics &amp; Cookies:</strong> Our website uses <strong>Google Analytics</strong> to understand how visitors use our pages. Analytics cookies and any related identifiers are <strong>only set after you accept</strong> via our consent banner; until then, analytics runs in a cookieless, consent-denied state (Google Consent Mode). Your choice is remembered across <code>vassantfinance.com</code> and its subdomains, and you can change it at any time by clearing the <code>va_consent</code> cookie in your browser.</p>
 
       <p><strong>In-App Product Analytics:</strong> Our mobile app uses <strong>PostHog</strong> to understand which features are used and where the experience can be improved. Events record in-app navigation and feature usage — for example, which tab you opened, which learning lesson you viewed, or which ticker symbol you looked at — together with device and app metadata (device model, operating system, app version, locale, time zone) and your IP address. Once you sign in, these events are associated with a numeric account identifier rather than your name or email address, and activity recorded before you signed in is linked to that identifier.</p>
@@ -59,7 +63,7 @@
       <h2 id="3">3. Payment Processing &amp; Subscription Billing</h2>
       <p>Vassant uses <strong>Stripe, Inc. ("Stripe")</strong> to process payments and manage recurring subscriptions. By subscribing to our paid services, you agree to the processing of your payment information by Stripe.</p>
       <ul>
-        <li><strong>Payment Data:</strong> When you provide payment information (such as credit card details or billing addresses), this data is transmitted directly to Stripe. Vassant does not store or have access to your full credit card number or CVV; we only retain a "token" and limited metadata (such as the last four digits and expiration date) to manage your subscription status.</li>
+        <li><strong>Payment Data:</strong> Subscriptions are purchased on a Stripe-hosted checkout page, which opens outside the app. Card details and billing addresses are entered there and go directly to Stripe. Vassant never receives your card number, CVV, expiration date, or the last four digits, and no card data passes through the app. What we store is a Stripe customer and subscription identifier plus subscription status — the plan, the renewal date, and whether it is set to cancel — which is what we need to know whether your account is active.</li>
         <li><strong>Subscription Management:</strong> Stripe acts as our merchant of record for billing. This includes handling upgrades, downgrades, and cancellations of your Vassant subscription.</li>
         <li><strong>Security Standards:</strong> Stripe has been audited by a PCI-certified auditor and is certified as a <strong>PCI Level 1 Service Provider</strong>. This is the most stringent level of certification available in the payments industry.</li>
         <li><strong>Privacy Policy:</strong> All payment processing is subject to the Stripe Privacy Policy. You acknowledge that Stripe may process your data for its own purposes, including fraud prevention and regulatory compliance.</li>
@@ -80,14 +84,14 @@
       <ul>
         <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
         <li><strong>Correction:</strong> Update or correct inaccurate personal information.</li>
-        <li><strong>Deletion:</strong> Request that we delete your data, subject to legal retention obligations.</li>
-        <li><strong>Opt-out:</strong> Limit certain uses or sharing of your data.</li>
+        <li><strong>Deletion:</strong> Delete your account and its data yourself, at any time, from <strong>Account Information &gt; Danger zone &gt; Delete account</strong> in the app. This does not require a request to us: it removes your account and everything stored against it — plan, budget, holdings, notes, and connected-account links — immediately and permanently, subject only to the legal retention obligations described in Section 6. You may also email us instead if you prefer.</li>
+        <li><strong>Opt-out:</strong> Limit certain uses or sharing of your data. Product analytics can be turned off in the app at <strong>Settings &gt; Privacy &gt; Share usage analytics</strong>.</li>
         <li><strong>Plaid Data Rights:</strong> You may also exercise rights over data held by Plaid directly at my.plaid.com.</li>
       </ul>
-      <p>To exercise your rights, please email us at <a href="mailto:support@vassantfinance.com" class="accent-link">support@vassantfinance.com</a> or submit a request via the app's settings.</p>
+      <p>To exercise the rights above that are not self-service, please email us at <a href="mailto:support@vassantfinance.com" class="accent-link">support@vassantfinance.com</a>.</p>
 
       <h2 id="6">6. Data Retention</h2>
-      <p>We retain your data only as long as necessary to provide services, comply with legal obligations, or resolve disputes. Upon a verified deletion request, we permanently delete your data from the production database. Deletion requests are honored within 30 days of receipt. Backup snapshots containing deleted data expire within 7 days. Data may be retained longer where required by law (e.g., tax obligations, legal holds, or fraud investigations).</p>
+      <p>We retain your data only as long as necessary to provide services, comply with legal obligations, or resolve disputes. Deleting your account in the app removes your data from the production database immediately. Deletion requests sent to us by email are honored within 30 days of receipt. In both cases, backup snapshots containing deleted data expire within 7 days. Data may be retained longer where required by law (e.g., tax obligations, legal holds, or fraud investigations).</p>
       <p>When you disconnect a Plaid-linked account or delete your Vassant account, Vassant calls Plaid's <code>/item/remove</code> endpoint to revoke the access token and instruct Plaid to delete the corresponding data on Plaid's side.</p>
 
       <h2 id="7">7. Third-Party Service Providers (Subprocessors)</h2>
@@ -113,8 +117,13 @@
           </tr>
           <tr>
             <td>TwelveData</td>
-            <td>Market data API</td>
-            <td>No user PII</td>
+            <td>Market data API and company logos</td>
+            <td>No user PII from our servers. Company logo images are served to your device directly, so TwelveData receives your IP address and the symbol requested</td>
+          </tr>
+          <tr>
+            <td>Logo.dev</td>
+            <td>Company logo images</td>
+            <td>Logos are served to your device directly, so Logo.dev receives your IP address and the symbol requested</td>
           </tr>
           <tr>
             <td>Sentry</td>
@@ -142,9 +151,24 @@
             <td>Account identifier, device/app metadata, IP address, in-app feature usage; no financial values</td>
           </tr>
           <tr>
+            <td>Apple</td>
+            <td>Sign in with Apple</td>
+            <td>Sign-in identifier, and the name and email you release to us</td>
+          </tr>
+          <tr>
+            <td>Google</td>
+            <td>Google sign-in</td>
+            <td>Sign-in identifier, name, email address</td>
+          </tr>
+          <tr>
+            <td>Meta (Facebook)</td>
+            <td>Facebook sign-in</td>
+            <td>Sign-in identifier, name, email address. Advertising features, app-event logging, and advertising identifiers are disabled in our builds</td>
+          </tr>
+          <tr>
             <td>Expo / EAS</td>
-            <td>Mobile application build infrastructure</td>
-            <td>Build artifacts only; no production user data</td>
+            <td>Mobile app build infrastructure and push notification delivery</td>
+            <td>Build artifacts contain no production user data. Push delivery handles your device's push token and the contents of notifications sent to you</td>
           </tr>
         </tbody>
       </table>
