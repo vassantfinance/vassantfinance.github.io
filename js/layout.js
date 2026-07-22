@@ -113,6 +113,10 @@
           '<span>&copy; 2026 Vassant Finance, LLC</span>' +
           '<a href="privacy">Privacy Policy</a>' +
           '<a href="terms">Terms &amp; Conditions</a>' +
+          // Google Play requires a publicly reachable account-deletion page for
+          // any app with sign-up. Linking it here keeps it discoverable rather
+          // than existing only as a URL pasted into Play Console.
+          '<a href="delete-account">Delete Account</a>' +
         '</div>' +
       '</div>' +
       '<div class="footer-col footer-col--contact">' +
