@@ -1978,7 +1978,8 @@ footer::before { display: none; }
     width: 100%;
     height: auto;
     margin: 0 auto;
-    overflow: visible;
+    overflow: hidden;
+    border-radius: 16px;
   }
 
   .ks-learning-squares,
@@ -1997,6 +1998,9 @@ footer::before { display: none; }
 
   .ks-bus.active {
     width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    object-position: top;
   }
 
   /* Overlay behind side nav */
