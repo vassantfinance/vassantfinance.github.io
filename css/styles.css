@@ -841,7 +841,7 @@ main.home {
   position: absolute;
   width: 260px;
   top: -10px;
-  right: 220px;
+  right: 120px;
   z-index: 0;
   mix-blend-mode: screen;
   pointer-events: none;
@@ -850,8 +850,8 @@ main.home {
 .ks-phone-iso {
   position: absolute;
   width: 483px;
-  bottom: -30px;
-  right: -30px;
+  bottom: 170px;
+  right: -130px;
   z-index: 3;
 }
 
