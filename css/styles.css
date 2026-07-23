@@ -1976,7 +1976,7 @@ footer::before { display: none; }
     display: block;
     position: relative;
     width: 100%;
-    height: auto;
+    height: 520px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 16px;
@@ -1988,17 +1988,30 @@ footer::before { display: none; }
   }
 
   .ks-bus-slideshow {
-    position: relative;
+    position: absolute;
     width: 100%;
-    top: auto;
+    height: 100%;
+    top: 0;
     right: auto;
-    left: auto;
+    left: 0;
     bottom: auto;
   }
 
-  .ks-bus.active {
+  .ks-bus {
+    position: absolute;
     width: 100%;
-    max-height: 420px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .ks-bus.active {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-height: none;
     object-fit: cover;
     object-position: top;
   }
@@ -2160,10 +2173,6 @@ footer::before { display: none; }
     gap: 2rem;
     margin-top: 4em;
     padding: 3rem 0;
-  }
-
-  .knowledge-composition {
-    height: 280px;
   }
 
   .ks-donut { width: 200px; left: 0; }
