@@ -850,8 +850,8 @@ main.home {
 .ks-phone-iso {
   position: absolute;
   width: 483px;
-  bottom: 170px;
-  right: -60px;
+  bottom: 210px;
+  right: -80px;
   z-index: 3;
 }
 
