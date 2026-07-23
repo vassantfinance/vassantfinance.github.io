@@ -850,8 +850,8 @@ main.home {
 .ks-phone-iso {
   position: absolute;
   width: 483px;
-  bottom: 310px;
-  right: -80px;
+  bottom: 280px;
+  right: -20px;
   z-index: 3;
 }
 
@@ -875,6 +875,26 @@ main.home {
 .ks-bus.active {
   opacity: 1;
   position: relative;
+}
+
+.ks-bus-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.ks-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.18);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.ks-dot.active {
+  background: #0092BD;
+  transform: scale(1.3);
 }
 
 .knowledge-text h2 {

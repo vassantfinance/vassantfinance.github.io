@@ -130,6 +130,13 @@
             <img src="images/sec-2-bus-model-4.png" class="ks-bus ks-bus-slide" alt="Business analysis 5">
           </div>
         </div>
+        <div class="ks-bus-dots">
+          <span class="ks-dot active"></span>
+          <span class="ks-dot"></span>
+          <span class="ks-dot"></span>
+          <span class="ks-dot"></span>
+          <span class="ks-dot"></span>
+        </div>
       </div>
       <div class="knowledge-text" data-scroll="right">
         <h2><span class="text-accent-cyan">Master</span> niche principles that drive long-term investment returns</h2>
@@ -356,11 +363,14 @@
 
     (function () {
       var slides = document.querySelectorAll('.ks-bus-slide');
+      var dots = document.querySelectorAll('.ks-dot');
       var current = 0;
       setInterval(function () {
         slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
         current = (current + 1) % slides.length;
         slides[current].classList.add('active');
+        dots[current].classList.add('active');
       }, 3000);
     })();
 
