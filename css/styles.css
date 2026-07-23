@@ -1976,21 +1976,27 @@ footer::before { display: none; }
     display: block;
     position: relative;
     width: 100%;
-    height: 260px;
+    height: auto;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible;
   }
 
-  .ks-donut {
-    width: 170px;
-    left: -8px;
-    top: 10px;
+  .ks-learning-squares,
+  .ks-phone-iso {
+    display: none;
   }
 
   .ks-bus-slideshow {
-    width: 175px;
-    right: -8px;
-    top: 0;
+    position: relative;
+    width: 100%;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+  }
+
+  .ks-bus.active {
+    width: 100%;
   }
 
   /* Overlay behind side nav */
@@ -2157,7 +2163,6 @@ footer::before { display: none; }
   }
 
   .ks-donut { width: 200px; left: 0; }
-  .ks-bus-slideshow { width: 200px; }
 
   .knowledge-awards {
     gap: 0.75rem;
