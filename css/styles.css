@@ -839,9 +839,9 @@ main.home {
 
 .ks-learning-squares {
   position: absolute;
-  width: 260px;
+  width: 390px;
   top: -10px;
-  right: 120px;
+  right: 190px;
   z-index: 0;
   mix-blend-mode: screen;
   pointer-events: none;
@@ -851,7 +851,7 @@ main.home {
   position: absolute;
   width: 483px;
   bottom: 170px;
-  right: -130px;
+  right: -60px;
   z-index: 3;
 }
 
@@ -859,7 +859,7 @@ main.home {
   position: absolute;
   width: 300px;
   top: 60px;
-  right: 190px;
+  right: 260px;
   z-index: 2;
 }
 
