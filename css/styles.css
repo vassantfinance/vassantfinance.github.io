@@ -675,7 +675,7 @@ main.home {
 .inv-mod-2 {
   position: absolute;
   width: 290px;
-  top: 0;
+  top: 10px;
   left: 290px;
   z-index: 2;
   opacity: 0;
