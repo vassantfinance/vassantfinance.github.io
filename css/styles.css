@@ -1025,6 +1025,24 @@ main.home {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   background: #0B1120;
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-dash-bg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.spotlight-text {
+  position: relative;
+  z-index: 1;
 }
 
 .spotlight-text h2 {
