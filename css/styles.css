@@ -884,6 +884,8 @@ main.home {
   margin-top: 100px;
   position: relative;
   z-index: 10;
+  max-width: 200px;
+  margin-left: 6em;
 }
 
 .ks-dot {
