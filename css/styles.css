@@ -664,8 +664,8 @@ main.home {
 
 .inv-mod-1 {
   position: absolute;
-  width: 270px;
-  top: 20px;
+  width: 290px;
+  top: 290px;
   left: 0;
   z-index: 1;
   opacity: 0;
@@ -674,8 +674,8 @@ main.home {
 
 .inv-mod-2 {
   position: absolute;
-  width: 300px;
-  top: 80px;
+  width: 290px;
+  top: 290px;
   left: 290px;
   z-index: 2;
   opacity: 0;
