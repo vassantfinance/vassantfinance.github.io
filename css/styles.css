@@ -2183,9 +2183,25 @@ footer::before { display: none; }
 
   /* --- Invest section --- */
   .invest-section { padding: 4rem var(--page-padding); margin-top: 3rem; }
-  .invest-composition { height: 300px; }
-  .inv-mod-1 { width: 145px; }
-  .inv-mod-2 { width: 160px; left: 60px; top: 40px; }
+  .invest-visual .mobile-section-img { display: none; }
+  .invest-composition {
+    display: block;
+    position: relative;
+    width: calc(100% + 2 * var(--page-padding));
+    margin-left: calc(-1 * var(--page-padding));
+    height: 420px;
+    overflow: visible;
+  }
+  .inv-mod-1 {
+    width: 48%;
+    top: 0;
+    left: 2%;
+  }
+  .inv-mod-2 {
+    width: 48%;
+    top: 10px;
+    left: 51%;
+  }
 
   .optimize-section { padding: 4rem var(--page-padding); }
   .optimize-composition { height: 300px; }
