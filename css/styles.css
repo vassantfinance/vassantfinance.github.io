@@ -655,6 +655,25 @@ main.home {
   margin-right: calc(50% - 50vw);
   background: #0B1120;
   margin-top: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.invest-glass-squares {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.invest-visual,
+.invest-text {
+  position: relative;
+  z-index: 1;
 }
 
 .invest-composition {
