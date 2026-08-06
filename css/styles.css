@@ -672,6 +672,7 @@ main.home {
 .invest-composition {
   position: relative;
   height: 560px;
+  overflow: visible;
 }
 
 .inv-mod-1 {
