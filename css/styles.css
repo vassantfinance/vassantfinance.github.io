@@ -258,58 +258,6 @@ main.home {
 }
 
 /* --- Hero pop shapes --- */
-.hero-shape {
-  position: absolute;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0;
-  will-change: opacity, transform;
-}
-
-.hero-shape.is-animated {
-  animation: heroPop var(--dur, 4s) ease-in-out var(--delay, 0s) infinite;
-}
-
-@keyframes heroPop {
-  0%   { opacity: 0;           transform: scale(0.5) rotate(var(--rot, 0deg)); }
-  12%  { opacity: var(--op, 0.15); transform: scale(1)   rotate(var(--rot, 0deg)); }
-  75%  { opacity: var(--op, 0.15); transform: scale(1)   rotate(var(--rot, 0deg)); }
-  100% { opacity: 0;           transform: scale(0.5) rotate(var(--rot, 0deg)); }
-}
-
-/* --- Decorative Floating Outline Shapes --- */
-.hero::before,
-.hero::after {
-  content: '';
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border-radius: 32px;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.18;
-}
-
-.hero::before {
-  top: 22%;
-  left: -230px;
-  border: 2px solid var(--accent-pink);
-  transform: rotate(-12deg);
-}
-
-.hero::after {
-  bottom: 18%;
-  right: -160px;
-  border: 2px solid var(--accent-cyan);
-  transform: rotate(8deg);
-}
-
-@media (max-width: 1100px) {
-  .hero::before,
-  .hero::after {
-    display: none;
-  }
-}
 
 /* --- Hero (Homepage) --- */
 .hero {
