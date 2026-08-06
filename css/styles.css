@@ -655,6 +655,7 @@ main.home {
   margin-right: calc(50% - 50vw);
   background: #0B1120;
   margin-top: 6rem;
+  padding-bottom: 11em;
 }
 
 .invest-glass-squares {
