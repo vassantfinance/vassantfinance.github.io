@@ -121,7 +121,7 @@ nav {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 2rem;
   margin-left: auto;
 }
 
@@ -161,7 +161,6 @@ nav {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.25rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -169,7 +168,23 @@ nav {
 
 .nav-links-cta { display: none; }
 
+/* The global `li` rule leaves a 5.6px bottom margin here. Flex centres the
+   margin box, so that margin pushed every label 2.8px above the nav's centre
+   line — visibly higher than the logo and the Sign up pill. */
+.nav-links li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* Padding rather than a flex gap so the hit target covers the full 2.25rem
+   rhythm, and inline-flex so the box is the line box — an inline <a> centres
+   on its 18px content box instead. */
 .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.4;
+  padding: 0 1.125rem;
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.875rem;
@@ -1340,9 +1355,55 @@ main.home {
   margin-top: 0;
 }
 
+/* Same readability pass as .about-body p — prose runs at full contrast
+   rather than the 62% grey. Only contact.html uses .section. */
+.section p {
+  color: var(--text-primary);
+}
+
+/* Positioning context for .page-deco. */
+main.contact {
+  position: relative;
+}
+
+/* --- Gutter Decoration (About, Contact) ---
+   Decorative glow squares in the outer gutters. Anchored to the viewport
+   rather than the column: the positioned ancestor is the 720px centred block,
+   so 50% is the viewport centre and calc(50% - 50vw) is its left edge. Width
+   is capped by the gutter itself so it can never crowd the text or push the
+   page into horizontal scroll. No mix-blend-mode — these PNGs are glow on
+   transparent, and `screen` is exactly what makes the homepage copies
+   invisible against white. */
+.page-deco {
+  position: absolute;
+  width: min(300px, calc((100vw - 720px) / 2 - 4rem));
+  height: auto;
+  opacity: 0.6;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+}
+
+.page-deco-left {
+  left: calc(50% - 50vw + 2rem);
+}
+
+.page-deco-right {
+  right: calc(50% - 50vw + 2rem);
+}
+
+.page-deco-1 { top: 4rem; }
+.page-deco-2 { top: 42%; }
+.page-deco-3 { bottom: 6rem; }
+
+@media (max-width: 1180px) {
+  .page-deco { display: none; }
+}
+
 /* --- About Page --- */
 .about-story {
   padding: 4rem 0 6rem;
+  position: relative;
 }
 
 .about-body {
@@ -1364,7 +1425,7 @@ main.home {
 .about-body p {
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -2083,6 +2144,7 @@ footer::before { display: none; }
   }
 
   .nav-links li {
+    display: block;
     border-bottom: 1px solid var(--border);
   }
 
