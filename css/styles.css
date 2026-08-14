@@ -2249,20 +2249,19 @@ footer::before { display: none; }
   .invest-composition {
     display: block;
     position: relative;
-    width: calc(100% + 2 * var(--page-padding));
-    margin-left: calc(-1 * var(--page-padding));
-    height: 420px;
-    overflow: visible;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
   }
   .inv-mod-1 {
-    width: 48%;
+    width: 50%;
     top: 0;
-    left: 2%;
+    left: 0;
   }
   .inv-mod-2 {
-    width: 48%;
+    width: 50%;
     top: 10px;
-    left: 51%;
+    left: 50%;
   }
 
   .optimize-section { padding: 4rem var(--page-padding); }
