@@ -56,6 +56,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Background glow — doubled opacity + larger radius */
@@ -654,7 +655,7 @@ main.home {
 .invest-composition {
   position: relative;
   height: 560px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .inv-mod-1 {
