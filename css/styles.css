@@ -44,6 +44,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Owns the viewport overflow so body's own overflow-x (below) isn't
+     propagated to the viewport and actually clips body's content. */
+  overflow-x: hidden;
 }
 
 body {
@@ -56,7 +59,11 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* Mobile browsers widen the layout viewport to fit horizontal overflow
+     (bleeding decorative graphics), which drags fixed elements like the
+     consent banner off-screen. `clip` cuts it without making body a scroll
+     container, so the sticky nav keeps working. */
+  overflow-x: clip;
 }
 
 /* Background glow — doubled opacity + larger radius */
