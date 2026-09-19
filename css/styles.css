@@ -1960,6 +1960,14 @@ footer::before { display: none; }
   transform: translate(0);
 }
 
+/* Nav row needs ~926px with the "Join the Waitlist" pill; drop the
+   secondary link first so the pill isn't clipped off the right edge. */
+@media (max-width: 960px) {
+  .nav-download-app {
+    display: none;
+  }
+}
+
 /* --- Mobile (<=640px) --- */
 /* =============================================
    RESPONSIVE — Tablet (≤900px)
