@@ -2033,6 +2033,8 @@ footer::before { display: none; }
     --page-padding: 1.25rem;
   }
 
+  .hero-squares-bg { display: none; }
+
   /* --- Side-nav drawer --- */
   .nav-toggle {
     display: flex;
