@@ -2312,6 +2312,14 @@ footer::before { display: none; }
     gap: 2.5rem;
   }
 
+  .spotlight-dash-bg {
+    width: 100%;
+    top: 0;
+    transform: none;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .spotlight-composition {
     height: 340px;
   }
