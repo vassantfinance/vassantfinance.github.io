@@ -825,6 +825,7 @@ main.home {
 .knowledge-composition {
   position: relative;
   height: 520px;
+  overflow: visible;
 }
 
 .ks-learning-squares {
@@ -847,9 +848,6 @@ main.home {
 
 .ks-bus-wrap {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 300px;
   top: 60px;
   right: 260px;
@@ -879,7 +877,7 @@ main.home {
   display: flex;
   justify-content: center;
   gap: 6px;
-  margin-top: 12px;
+  margin-top: 10px;
   position: relative;
   z-index: 10;
 }
@@ -2100,9 +2098,6 @@ footer::before { display: none; }
     top: 0;
     left: 0;
     right: auto;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 16px;
   }
 
   .ks-bus-slideshow {
@@ -2111,6 +2106,14 @@ footer::before { display: none; }
     height: 100%;
     top: 0;
     left: 0;
+  }
+
+  .ks-bus-dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
   }
 
   .ks-bus {
