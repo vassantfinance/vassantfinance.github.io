@@ -2011,7 +2011,8 @@ footer::before { display: none; }
   }
 
   .ks-donut { width: 260px; }
-  .ks-bus-wrap { width: 260px; }
+  .ks-learning-squares { position: relative; width: 100%; top: auto; right: auto; }
+  .ks-bus-wrap { width: 260px; top: 0; right: 0; left: 50%; transform: translateX(-50%); }
   .ks-phone-iso { display: none; }
   .ks-bus-dots { margin-left: 0; justify-content: center; max-width: 100%; }
 
