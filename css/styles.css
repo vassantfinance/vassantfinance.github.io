@@ -2313,11 +2313,13 @@ footer::before { display: none; }
   }
 
   .spotlight-dash-bg {
-    width: 100%;
-    top: 0;
-    transform: none;
-    height: 100%;
+    width: 150%;
+    height: 150%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     object-fit: cover;
+    opacity: 0.85;
   }
 
   .spotlight-composition {
