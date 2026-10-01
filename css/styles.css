@@ -845,12 +845,20 @@ main.home {
   z-index: 3;
 }
 
-.ks-bus-slideshow {
+.ks-bus-wrap {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 300px;
   top: 60px;
   right: 260px;
   z-index: 2;
+}
+
+.ks-bus-slideshow {
+  position: relative;
+  width: 100%;
 }
 
 .ks-bus {
@@ -871,11 +879,9 @@ main.home {
   display: flex;
   justify-content: center;
   gap: 6px;
-  margin-top: 100px;
+  margin-top: 12px;
   position: relative;
   z-index: 10;
-  max-width: 200px;
-  margin-left: 6em;
 }
 
 .ks-dot {
@@ -2007,7 +2013,7 @@ footer::before { display: none; }
   }
 
   .ks-donut { width: 260px; }
-  .ks-bus-slideshow { width: 260px; }
+  .ks-bus-wrap { width: 260px; }
   .ks-phone-iso { display: none; }
   .ks-bus-dots { margin-left: 0; justify-content: center; max-width: 100%; }
 
@@ -2087,14 +2093,24 @@ footer::before { display: none; }
     display: none;
   }
 
+  .ks-bus-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 16px;
+  }
+
   .ks-bus-slideshow {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    right: auto;
     left: 0;
-    bottom: auto;
   }
 
   .ks-bus {
@@ -2117,7 +2133,9 @@ footer::before { display: none; }
   }
 
   .ks-bus-dots {
-    margin-top: 16px;
+    position: relative;
+    z-index: 10;
+    margin-top: 0;
     margin-left: 0;
     justify-content: center;
     max-width: 100%;
