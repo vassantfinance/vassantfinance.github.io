@@ -375,13 +375,32 @@
       var slides = document.querySelectorAll('.ks-bus-slide');
       var dots = document.querySelectorAll('.ks-dot');
       var current = 0;
-      setInterval(function () {
+      var timer;
+
+      function goTo(index) {
         slides[current].classList.remove('active');
         dots[current].classList.remove('active');
-        current = (current + 1) % slides.length;
+        current = index;
         slides[current].classList.add('active');
         dots[current].classList.add('active');
-      }, 3000);
+      }
+
+      function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(function () {
+          goTo((current + 1) % slides.length);
+        }, 3000);
+      }
+
+      dots.forEach(function (dot, i) {
+        dot.style.cursor = 'pointer';
+        dot.addEventListener('click', function () {
+          goTo(i);
+          startTimer();
+        });
+      });
+
+      startTimer();
     })();
 
   </script>

@@ -2008,6 +2008,8 @@ footer::before { display: none; }
 
   .ks-donut { width: 260px; }
   .ks-bus-slideshow { width: 260px; }
+  .ks-phone-iso { display: none; }
+  .ks-bus-dots { margin-left: 0; justify-content: center; max-width: 100%; }
 
   .features-section {
     grid-template-columns: 1fr 1fr;
@@ -2101,8 +2103,8 @@ footer::before { display: none; }
     height: 100%;
     top: 0;
     left: 0;
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain;
+    object-position: center;
   }
 
   .ks-bus.active {
@@ -2110,12 +2112,15 @@ footer::before { display: none; }
     width: 100%;
     height: 100%;
     max-height: none;
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain;
+    object-position: center;
   }
 
   .ks-bus-dots {
     margin-top: 16px;
+    margin-left: 0;
+    justify-content: center;
+    max-width: 100%;
   }
 
   /* Overlay behind side nav */
