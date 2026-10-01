@@ -2280,8 +2280,8 @@ footer::before { display: none; }
 
   .optimize-section { padding: 4rem var(--page-padding); }
   .optimize-composition { height: 300px; }
-  .opt-invest-mod { width: 145px; }
-  .opt-roth-ira { width: 200px; top: 50px; }
+  .opt-invest-mod { width: 145px; left: 90px; top: 50px; }
+  .opt-roth-ira { width: 200px; top: -30px; right: 0; left: 0; margin: 0 auto; }
 
   /* --- Knowledge section --- */
   .knowledge-section {
