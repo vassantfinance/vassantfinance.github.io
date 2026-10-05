@@ -2099,6 +2099,7 @@ footer::before { display: none; }
     top: 0;
     left: 0;
     right: auto;
+    transform: none;
   }
 
   .ks-bus-slideshow {
