@@ -85,8 +85,7 @@
         link('contact.html', 'Contact') +
       '</ul>' +
       '<div class="nav-actions">' +
-        '<a href="index.html#waitlist-form" class="nav-download-app">Download the App</a>' +
-        '<a href="index.html#waitlist-form" class="nav-cta btn-outline">Join the Waitlist</a>' +
+        '<a href="index.html#download" class="nav-download-app">Download the App</a>' +
         '<button class="nav-toggle" aria-label="Toggle menu">' +
           '<span></span><span></span><span></span>' +
         '</button>' +

@@ -146,26 +146,6 @@ nav {
   opacity: 0.75;
 }
 
-.nav-cta {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.45rem 1.25rem;
-  border-radius: 9999px;
-  border: 1.5px solid var(--text-primary);
-  color: var(--text-primary);
-  font-family: inherit;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-}
-
-.nav-cta:hover {
-  background: var(--text-primary);
-  color: var(--bg);
-}
-
 .nav-links {
   display: flex;
   align-items: center;
@@ -290,6 +270,9 @@ main.home {
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
   gap: 2.5rem;
+  /* "Download the App" links here; offset for the sticky nav so the
+     whole hero, store badges included, lands in view. */
+  scroll-margin-top: var(--nav-height);
 }
 
 .hero-squares-bg {
@@ -475,62 +458,6 @@ main.home {
   }
 }
 
-/* --- Waitlist Form --- */
-.waitlist-form {
-  display: flex;
-  gap: 0.5rem;
-  max-width: 480px;
-  width: 100%;
-  margin-top: 0.5rem;
-}
-
-.waitlist-form input[type="email"] {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 9999px;
-  color: var(--text-primary);
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.9rem;
-  outline: none;
-  transition: border-color 0.25s;
-}
-
-.waitlist-form input[type="email"]::placeholder {
-  color: var(--text-tertiary);
-}
-
-.waitlist-form input[type="email"]:focus {
-  border-color: var(--accent-pink-border);
-}
-
-.waitlist-form button {
-  padding: 0.75rem 1.5rem;
-  background: var(--accent-pink);
-  color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-  white-space: nowrap;
-  box-shadow: 0 4px 20px var(--card-glow-pink);
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.waitlist-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px var(--card-glow-pink), 0 2px 12px var(--card-glow-cyan);
-}
-
-.waitlist-form button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-  transform: none;
-}
-
 .hero-store-badges {
   display: flex;
   gap: 0.75rem;
@@ -551,21 +478,6 @@ main.home {
   width: auto;
   display: block;
   mix-blend-mode: multiply;
-}
-
-
-.waitlist-msg {
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin: 0;
-}
-
-.waitlist-success {
-  color: var(--accent-cyan);
-}
-
-.waitlist-error {
-  color: var(--accent-pink);
 }
 
 /* --- Hero CTA Buttons --- */
@@ -1964,9 +1876,9 @@ footer::before { display: none; }
   transform: translate(0);
 }
 
-/* Nav row needs ~926px with the "Join the Waitlist" pill; drop the
-   secondary link first so the pill isn't clipped off the right edge. */
-@media (max-width: 960px) {
+/* Nav row needs ~775px with the "Download the App" link; hide it below
+   that so it isn't clipped off the right edge. */
+@media (max-width: 800px) {
   .nav-download-app {
     display: none;
   }
@@ -2045,10 +1957,6 @@ footer::before { display: none; }
   /* --- Side-nav drawer --- */
   .nav-toggle {
     display: flex;
-  }
-
-  .nav-cta {
-    display: none;
   }
 
   .nav-download-app {
@@ -2265,16 +2173,6 @@ footer::before { display: none; }
   }
 
   /* --- Forms — full width --- */
-  .waitlist-form {
-    flex-direction: column;
-  }
-
-  .waitlist-form input[type="email"],
-  .waitlist-form button {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
   .cta-form {
     flex-direction: column;
     width: 100%;

@@ -32,17 +32,13 @@
 
 <body>
   <main class="home">
-    <section class="hero">
+    <section class="hero" id="download">
       <img src="images/hero-squares-bg.png" class="hero-squares-bg" alt="" aria-hidden="true">
 <div class="hero-text fade-in">
         <h1>Smarter investment decision-making.</h1>
         <p class="subtitle">The strategic center for your investment organization and capital allocation.
           <br>
     Structure where your cash goes, which accounts to optimize, what investments to make, and why you want to make them.</p>
-        <form class="waitlist-form" id="waitlist-form">
-          <input type="email" name="email" placeholder="Enter your email" required>
-          <button type="submit">Join the Waitlist</button>
-        </form>
         <div class="hero-store-badges">
           <a href="https://apps.apple.com/app/id6761031368" aria-label="Download on the App Store" target="_blank" rel="noopener"><img src="images/btn-app-store.svg" alt="App Store"></a>
           <a href="https://play.google.com/store/apps/details?id=com.vassant.app" aria-label="Get it on Google Play" target="_blank" rel="noopener"><img src="images/btn-google-play.svg" alt="Google Play"></a>
@@ -297,7 +293,7 @@
     </div>
   </section>
 
-  <script src="js/layout.js?v=11"></script>
+  <script src="js/layout.js?v=12"></script>
   <script>
     (function () {
       var observer = new IntersectionObserver(function (entries) {
@@ -313,34 +309,6 @@
         observer.observe(el);
       });
     })();
-  </script>
-  <script>
-    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby7Mj6CUogHwtGHQvtR565F_WCKmF0JEaVcxh-9CtuP9zNoGHTu9nTvguo8oDdzmlae/exec';
-
-    document.getElementById('waitlist-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var form = this;
-      var button = form.querySelector('button');
-      var email = form.querySelector('input[name="email"]').value.trim();
-      if (!email) return;
-
-      button.disabled = true;
-      button.textContent = 'Submitting\u2026';
-
-      var xhr = new XMLHttpRequest();
-      xhr.open('POST', SCRIPT_URL);
-      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            form.innerHTML = '<p class="waitlist-msg waitlist-success">You\u2019re on the list! We\u2019ll be in touch.</p>';
-          } else {
-            form.innerHTML = '<p class="waitlist-msg waitlist-error">Something went wrong. Please try again later.</p>';
-          }
-        }
-      };
-      xhr.send('email=' + encodeURIComponent(email));
-    });
   </script>
   <script>
     (function () {
