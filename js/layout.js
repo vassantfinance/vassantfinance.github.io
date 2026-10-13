@@ -71,6 +71,9 @@
   }
 
   /* --- Nav --- */
+  var SIGN_IN_URL = 'https://app.vassantfinance.com/sign-in';
+  var SIGN_UP_URL = 'https://app.vassantfinance.com/sign-up';
+
   var nav = document.createElement('nav');
   nav.innerHTML =
     '<div class="nav-inner">' +
@@ -83,9 +86,13 @@
         ext('https://docs.vassantfinance.com', 'Docs') +
         ext('https://docs.vassantfinance.com/blog', 'Blog') +
         link('contact.html', 'Contact') +
+        // Drawer-only copies of the auth buttons; the header ones are hidden on mobile
+        '<li class="nav-links-cta nav-links-cta--secondary"><a href="' + SIGN_IN_URL + '">Log in</a></li>' +
+        '<li class="nav-links-cta"><a href="' + SIGN_UP_URL + '">Sign up</a></li>' +
       '</ul>' +
       '<div class="nav-actions">' +
-        '<a href="index.html#download" class="nav-download-app">Download the App</a>' +
+        '<a href="' + SIGN_IN_URL + '" class="nav-login">Log in</a>' +
+        '<a href="' + SIGN_UP_URL + '" class="nav-signup btn-primary">Sign up</a>' +
         '<button class="nav-toggle" aria-label="Toggle menu">' +
           '<span></span><span></span><span></span>' +
         '</button>' +
