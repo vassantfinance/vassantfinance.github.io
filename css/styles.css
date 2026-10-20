@@ -1921,8 +1921,13 @@ footer::before { display: none; }
     padding: 5rem var(--page-padding);
   }
 
+  /* Heading, copy and awards read before the slideshow once the section stacks */
+  .knowledge-text { order: -1; }
+
+  /* Slideshow stays in flow so the section grows to fit it instead of spilling over the text */
   .knowledge-composition {
-    height: 340px;
+    height: auto;
+    padding: 2rem 0;
   }
 
   .spotlight-composition {
@@ -1930,8 +1935,9 @@ footer::before { display: none; }
   }
 
   .ks-donut { width: 260px; }
-  .ks-learning-squares { position: relative; width: 100%; top: auto; right: auto; }
-  .ks-bus-wrap { width: 260px; top: 0; right: 0; left: 50%; transform: translateX(-50%); }
+  .ks-learning-squares { width: 380px; top: 50%; right: auto; left: 50%; transform: translate(-50%, -50%); }
+  .ks-bus-wrap { position: relative; width: 300px; top: auto; right: auto; left: auto; margin: 0 auto; }
+  .ks-bus { width: 100%; }
   .ks-phone-iso { display: none; }
   .ks-bus-dots { margin-left: 0; justify-content: center; max-width: 100%; }
 
