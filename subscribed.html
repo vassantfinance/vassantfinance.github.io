@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're subscribed — Vassant Finance</title>
+  <!-- Only reached from links in our emails; nothing here for search. -->
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+  <!-- vassant-api redirects here from the links in the subscribe emails:
+       no status after a confirm, ?status=expired|invalid|unsubscribed otherwise. -->
+  <main class="contact">
+    <div class="page-header fade-in" data-status="confirmed">
+      <h1>You're on the list</h1>
+      <p class="page-desc">Thanks for confirming your email address</p>
+    </div>
+    <section class="section fade-in" data-status="confirmed">
+      <p>We've sent a welcome email with what to expect. You'll hear from us about new features, research and writing, and announcements, about once a week. Every email has a one-click unsubscribe link.</p>
+      <p>Subscribing doesn't create a Vassant account. When you're ready, <a href="https://app.vassantfinance.com/sign-up" class="accent-link">create one here</a>, or <a href="https://docs.vassantfinance.com/blog" class="accent-link">start with the blog</a>.</p>
+    </section>
+
+    <div class="page-header fade-in" data-status="expired" hidden>
+      <h1>This link has expired</h1>
+      <p class="page-desc">Confirmation links are good for 7 days</p>
+    </div>
+    <section class="section fade-in" data-status="expired" hidden>
+      <p>This confirmation link is no longer valid. It may be more than 7 days old, or a newer one may have been sent since.</p>
+      <p>To subscribe, <a href="/#cta-form" class="accent-link">enter your email again</a> and we'll send you a fresh link.</p>
+    </section>
+
+    <div class="page-header fade-in" data-status="unsubscribed" hidden>
+      <h1>You're unsubscribed</h1>
+      <p class="page-desc">You won't receive any more marketing emails from us</p>
+    </div>
+    <section class="section fade-in" data-status="unsubscribed" hidden>
+      <p>We've removed your address from the Vassant marketing list. If you have a Vassant account, you'll still get account and security emails.</p>
+      <p>Changed your mind? <a href="/#cta-form" class="accent-link">Subscribe again</a> at any time.</p>
+    </section>
+
+    <div class="page-header fade-in" data-status="invalid" hidden>
+      <h1>This link isn't valid</h1>
+      <p class="page-desc">It may have been copied incompletely</p>
+    </div>
+    <section class="section fade-in" data-status="invalid" hidden>
+      <p>Try the link from the email again. If it still doesn't work, <a href="contact.html" class="accent-link">contact us</a> and we'll remove your address by hand.</p>
+    </section>
+  </main>
+
+  <script src="js/layout.js?v=13"></script>
+  <script>
+    (function () {
+      var known = ['confirmed', 'expired', 'unsubscribed', 'invalid'];
+      var status = new URLSearchParams(location.search).get('status');
+      if (known.indexOf(status) === -1) status = 'confirmed';
+
+      document.querySelectorAll('[data-status]').forEach(function (el) {
+        el.hidden = el.getAttribute('data-status') !== status;
+      });
+      document.title = document.querySelector('[data-status="' + status + '"] h1').textContent + ' — Vassant Finance';
+    })();
+  </script>
+</body>
+</html>

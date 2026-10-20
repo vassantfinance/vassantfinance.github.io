@@ -286,14 +286,26 @@
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="M2 7l10 7 10-7"/>
           </svg>
-          <input type="email" name="email" placeholder="hello@vassantfinance.com" required>
+          <input type="email" name="email" placeholder="hello@vassantfinance.com" aria-label="Email address" autocomplete="email" required>
         </div>
+        <!-- Honeypot: hidden from people, filled in by bots. The API drops any
+             submission that has it. -->
+        <input type="text" name="website" class="cta-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button type="submit">Subscribe</button>
       </form>
+      <p class="cta-status" id="cta-status" role="status" hidden></p>
     </div>
   </section>
 
+  <dialog class="subscribe-dialog" id="subscribe-dialog" aria-labelledby="subscribe-dialog-title">
+    <h2 id="subscribe-dialog-title">Check your inbox</h2>
+    <p>We’ve sent a confirmation link to <strong data-email></strong>. Click it to finish subscribing.</p>
+    <p class="subscribe-dialog-note">You won’t receive anything from us until you confirm. The link is good for 7 days. If it’s not there, check your spam folder.</p>
+    <button type="button" class="btn-primary" data-close>Got it</button>
+  </dialog>
+
   <script src="js/layout.js?v=13"></script>
+  <script src="js/subscribe.js?v=1"></script>
   <script>
     (function () {
       var observer = new IntersectionObserver(function (entries) {
