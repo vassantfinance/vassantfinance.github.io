@@ -11,7 +11,7 @@ Static website for Vassant Finance (vassantfinance.github.io). Multi-page compan
 - **Static site** — no build step, no framework, no package manager
 - Shared stylesheet at `css/styles.css` (Outfit + Plus Jakarta Sans via Google Fonts)
 - Five HTML pages in root: `index.html`, `about.html`, `contact.html`, `privacy.html`, `terms.html`
-- Images in `images/` (logo/favicon: `images/icon.png`)
+- Images in `images/`; favicons (copied from the web app) in root: `favicon.ico`, `favicon-192.png`, `apple-touch-icon.png`
 - Deployed automatically on push to `main` via GitHub Pages
 
 ## File Structure
@@ -23,7 +23,7 @@ contact.html      ← email, phone, mailing address (matches D-U-N-S)
 privacy.html      ← privacy policy
 terms.html        ← terms & conditions (CA governing law)
 css/styles.css    ← shared stylesheet for all pages
-images/icon.png   ← logo/favicon
+favicon.ico, favicon-192.png, apple-touch-icon.png ← favicons, same as the web app
 ```
 
 ## Shared Elements
