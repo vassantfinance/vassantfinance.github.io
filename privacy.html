@@ -87,7 +87,7 @@
       <ul>
         <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
         <li><strong>Correction:</strong> Update or correct inaccurate personal information.</li>
-        <li><strong>Deletion:</strong> Delete your account and its data yourself, at any time, from <strong>Account Information &gt; Danger zone &gt; Delete account</strong> in the app. This does not require a request to us: it removes your account and everything stored against it — plan, budget, holdings, notes, and connected-account links — immediately and permanently, subject only to the legal retention obligations described in Section 6. Deleting your account cancels a Stripe subscription, which runs until the end of the period you have paid for. It does not cancel an Apple App Store subscription, because only you can do that, so Apple will keep charging you until you cancel it in your Apple Account. You may also email us instead if you prefer.</li>
+        <li><strong>Deletion:</strong> Delete your account and its data yourself, at any time, from <strong>Account Information &gt; Danger zone &gt; Delete account</strong> in the app. This does not require a request to us: it removes your account and everything stored against it — plan, budget, holdings, notes, and connected-account links — immediately and permanently, subject only to the retention described in Section 6. Deleting your account cancels a Stripe subscription, which runs until the end of the period you have paid for. It does not cancel an Apple App Store subscription, because only you can do that, so Apple will keep charging you until you cancel it in your Apple Account. You may also email us instead if you prefer.</li>
         <li><strong>Opt-out:</strong> Limit certain uses or sharing of your data. Product analytics can be turned off in the app at <strong>Settings &gt; Privacy &gt; Share usage analytics</strong>.</li>
         <li><strong>Plaid Data Rights:</strong> You may also exercise rights over data held by Plaid directly at my.plaid.com.</li>
       </ul>
@@ -95,6 +95,7 @@
 
       <h2 id="6">6. Data Retention</h2>
       <p>We retain your data only as long as necessary to provide services, comply with legal obligations, or resolve disputes. Deleting your account in the app removes your data from the production database immediately. Deletion requests sent to us by email are honored within 30 days of receipt. In both cases, backup snapshots containing deleted data expire within 7 days. Data may be retained longer where required by law (e.g., tax obligations, legal holds, or fraud investigations).</p>
+      <p>Product analytics events in PostHog carry no name, email address, or financial values, and they are not deleted automatically when you delete your account. Email us and we will remove them. Error reports in Sentry and email delivery records at Resend are kept under those providers' own retention periods.</p>
       <p>When you disconnect a Plaid-linked account or delete your Vassant account, Vassant calls Plaid's <code>/item/remove</code> endpoint to revoke the access token and instruct Plaid to delete the corresponding data on Plaid's side.</p>
 
       <h2 id="7">7. Third-Party Service Providers (Subprocessors)</h2>
@@ -152,6 +153,11 @@
             <td>PostHog</td>
             <td>In-app product analytics</td>
             <td>Account identifier, device/app metadata, IP address, in-app feature usage; no financial values</td>
+          </tr>
+          <tr>
+            <td>Resend</td>
+            <td>Email delivery</td>
+            <td>Email address and the contents of emails sent to you</td>
           </tr>
           <tr>
             <td>Apple</td>
