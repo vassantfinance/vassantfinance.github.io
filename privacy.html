@@ -29,7 +29,7 @@
   <main>
     <div class="page-header fade-in">
       <h1><span class="gradient-text">Privacy</span> Policy</h1>
-      <p class="page-desc">Last updated: July 22, 2026</p>
+      <p class="page-desc">Last updated: October 30, 2026</p>
     </div>
 
     <div class="legal-content fade-in">
@@ -63,12 +63,13 @@
       </ul>
 
       <h2 id="3">3. Payment Processing &amp; Subscription Billing</h2>
-      <p>Vassant uses <strong>Stripe, Inc. ("Stripe")</strong> to process payments and manage recurring subscriptions. By subscribing to our paid services, you agree to the processing of your payment information by Stripe.</p>
+      <p>Vassant uses <strong>Stripe, Inc. ("Stripe")</strong> and the <strong>Apple App Store</strong> to process payments and manage recurring subscriptions. Subscriptions purchased in the iOS app are billed by Apple. All others are billed through Stripe. By subscribing to our paid services, you agree to the processing of your payment information by the provider you buy through.</p>
       <ul>
-        <li><strong>Payment Data:</strong> Subscriptions are purchased on a Stripe-hosted checkout page, which opens outside the app. Card details and billing addresses are entered there and go directly to Stripe. Vassant never receives your card number, CVV, expiration date, or the last four digits, and no card data passes through the app. What we store is a Stripe customer and subscription identifier plus subscription status — the plan, the renewal date, and whether it is set to cancel — which is what we need to know whether your account is active.</li>
-        <li><strong>Subscription Management:</strong> Stripe acts as our merchant of record for billing. This includes handling upgrades, downgrades, and cancellations of your Vassant subscription.</li>
+        <li><strong>Stripe Payment Data:</strong> Outside the iOS app, subscriptions are purchased on a Stripe-hosted checkout page, which opens outside the app. Card details and billing addresses are entered there and go directly to Stripe. Vassant never receives your card number, CVV, expiration date, or the last four digits, and no card data passes through the app. What we store is a Stripe customer and subscription identifier plus subscription status — the plan, the renewal date, and whether it is set to cancel — which is what we need to know whether your account is active.</li>
+        <li><strong>Apple App Store Payment Data:</strong> Subscriptions purchased in the iOS app are charged to your Apple Account. Apple handles your payment details and Vassant never receives them. We give Apple an identifier for your Vassant account with each purchase so the subscription can be matched to your account. What we store is Apple's transaction and product identifiers plus subscription status — the plan, the price, the renewal date, and whether it is set to cancel.</li>
+        <li><strong>Subscription Management:</strong> For Stripe subscriptions, Stripe acts as our merchant of record for billing. This includes handling upgrades, downgrades, and cancellations of your Vassant subscription. Apple handles billing, refunds, and cancellations for App Store subscriptions, which you manage in your Apple Account.</li>
         <li><strong>Security Standards:</strong> Stripe has been audited by a PCI-certified auditor and is certified as a <strong>PCI Level 1 Service Provider</strong>. This is the most stringent level of certification available in the payments industry.</li>
-        <li><strong>Privacy Policy:</strong> All payment processing is subject to the Stripe Privacy Policy. You acknowledge that Stripe may process your data for its own purposes, including fraud prevention and regulatory compliance.</li>
+        <li><strong>Privacy Policy:</strong> Payment processing is subject to the privacy policy of the provider you buy through, Stripe or Apple. You acknowledge that they may process your data for their own purposes, including fraud prevention and regulatory compliance.</li>
       </ul>
 
       <h2 id="4">4. Our Security Commitment</h2>
@@ -86,7 +87,7 @@
       <ul>
         <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
         <li><strong>Correction:</strong> Update or correct inaccurate personal information.</li>
-        <li><strong>Deletion:</strong> Delete your account and its data yourself, at any time, from <strong>Account Information &gt; Danger zone &gt; Delete account</strong> in the app. This does not require a request to us: it removes your account and everything stored against it — plan, budget, holdings, notes, and connected-account links — immediately and permanently, subject only to the legal retention obligations described in Section 6. You may also email us instead if you prefer.</li>
+        <li><strong>Deletion:</strong> Delete your account and its data yourself, at any time, from <strong>Account Information &gt; Danger zone &gt; Delete account</strong> in the app. This does not require a request to us: it removes your account and everything stored against it — plan, budget, holdings, notes, and connected-account links — immediately and permanently, subject only to the legal retention obligations described in Section 6. Deleting your account cancels a Stripe subscription, which runs until the end of the period you have paid for. It does not cancel an Apple App Store subscription, because only you can do that, so Apple will keep charging you until you cancel it in your Apple Account. You may also email us instead if you prefer.</li>
         <li><strong>Opt-out:</strong> Limit certain uses or sharing of your data. Product analytics can be turned off in the app at <strong>Settings &gt; Privacy &gt; Share usage analytics</strong>.</li>
         <li><strong>Plaid Data Rights:</strong> You may also exercise rights over data held by Plaid directly at my.plaid.com.</li>
       </ul>
@@ -156,6 +157,11 @@
             <td>Apple</td>
             <td>Sign in with Apple</td>
             <td>Sign-in identifier, and the name and email you release to us</td>
+          </tr>
+          <tr>
+            <td>Apple</td>
+            <td>App Store subscription billing</td>
+            <td>Account identifier, transaction and subscription status (see Section 3)</td>
           </tr>
           <tr>
             <td>Google</td>
