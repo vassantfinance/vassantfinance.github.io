@@ -69,19 +69,25 @@
       <h2 id="4">4. Connected Bank and Brokerage Data</h2>
       <p>If you connected an institution through Plaid, deleting your account also revokes that connection with Plaid and instructs Plaid to delete the corresponding data on its side. You can additionally manage or delete data Plaid holds about you directly at <a href="https://my.plaid.com" class="accent-link" rel="noopener">my.plaid.com</a>.</p>
 
-      <h2 id="5">5. What Is Retained, and For How Long</h2>
+      <h2 id="5">5. Your Subscription</h2>
+      <p>Deleting your account cancels a subscription billed through Stripe. It runs until the end of the period you have paid for and does not renew.</p>
+      <p><strong>Deleting your account does not cancel a subscription purchased through the Apple App Store.</strong> Only you can do that, and Apple will keep charging you until you do. Cancel it in your <a href="https://apps.apple.com/account/subscriptions" class="accent-link">Apple Account subscriptions</a>, ideally before you delete your account.</p>
+
+      <h2 id="6">6. What Is Retained, and For How Long</h2>
       <p>A small amount of data outlives the deletion, in every case for a specific reason:</p>
       <ul>
         <li><strong>Encrypted backup snapshots</strong> — deleted data may persist in routine database backups until those snapshots expire, which happens within <strong>7 days</strong>. Backups are not used to restore deleted accounts.</li>
-        <li><strong>Billing and tax records</strong> — if you ever held a paid subscription, Stripe retains transaction records as its own controller, and we retain the minimum billing history required by tax and accounting law. This does not include your app data.</li>
+        <li><strong>Billing and tax records</strong> — if you ever held a paid subscription, Stripe or Apple retains transaction records as its own controller, and we retain the minimum billing history required by tax and accounting law. This does not include your app data.</li>
+        <li><strong>Product analytics</strong> — PostHog keeps the in-app usage events tied to your numeric account identifier. They contain no name, email address, or financial values, and they are not deleted automatically. Email <a href="mailto:support@vassantfinance.com" class="accent-link">support@vassantfinance.com</a> and we will remove them.</li>
+        <li><strong>Error reports and email records</strong> — Sentry error reports may incidentally contain your account identifier, and Resend keeps delivery records of the emails we sent you. Both are kept under those providers' own retention periods.</li>
         <li><strong>Legal holds</strong> — data subject to an active legal hold, fraud investigation, or a specific legal obligation is retained until that obligation ends.</li>
       </ul>
       <p>Nothing retained under the above is used to rebuild your account or to contact you.</p>
 
-      <h2 id="6">6. Deleting Data Without Deleting Your Account</h2>
+      <h2 id="7">7. Deleting Data Without Deleting Your Account</h2>
       <p>If you want to remove specific data but keep your account, you can do that in the app: disconnect an institution to revoke its Plaid connection and remove its synced holdings, delete individual vaults, holdings, or budget entries, or turn off product analytics at <strong>Settings &gt; Privacy &gt; Share usage analytics</strong>.</p>
 
-      <h2 id="7">7. Questions</h2>
+      <h2 id="8">8. Questions</h2>
       <ul>
         <li><strong>Email:</strong> <a href="mailto:support@vassantfinance.com" class="accent-link">support@vassantfinance.com</a></li>
         <li><strong>Phone:</strong> +1 (442) 500-4853</li>
